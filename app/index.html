@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Гостиница "Миасс"</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- <link rel="icon" href="images/favicon.png"> -->
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+
+    </div>
+  </header>
+
+  <div class="main">
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+  <div id="how-we-work" class="how-we-work">
+
+  </div>
+
+  <div id="products" class="products section">
+    <div class="input-container">
+      <input id="header-in-select" name="in-select" class="select in-select" placeholder="Заезд" readonly="readonly">
+      <label for="header-in-select" class="input-arrow"></label>
+    </div>
+  </div>
+
+  <div id="about" class="about section">
+    <div class="pswp-gallery pswp-gallery--single-column my-gallery" id="gallery--getting-started">
+      
+      <!-- cropped thumbnail: -->
+      <div class="gallery-item croped">
+        <a  href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg" 
+        data-pswp-width="1875" 
+        data-pswp-height="2500" 
+        data-cropped="true" 
+        target="_blank">
+        <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg" alt="" />
+      </a>
+      </div>
+      
+      <a class="hidden" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" 
+        data-pswp-width="1669" 
+        data-pswp-height="2500" 
+        target="_blank">
+        <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="" />
+      </a>
+      <!-- data-pswp-src with custom URL in href -->
+      <a class="hidden" href="https://unsplash.com" 
+        data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+        data-pswp-width="2500" 
+        data-pswp-height="1666" 
+        target="_blank">
+        <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="" />
+      </a>
+      <!-- Without thumbnail: -->
+      <a class="hidden" href="http://example.com" 
+        data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg"
+        data-pswp-width="2500" 
+        data-pswp-height="1668" 
+        target="_blank">
+        No thumbnail
+      </a>
+
+    </div>
+  </div>
+
+  <div id="chess" class="chess section">
+
+  </div>
+
+  <footer class="footer">
+
+  </footer>
+
+  <!-- mobile menu -->
+  <div class="burger-menu-wrapper">
+    <div class="burger-menu">
+      <span></span>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <ul class="menu">
+      <li class="menu-item">
+        <a href="#about">О проекте</a>
+      </li>
+      <li class="menu-item">
+        <a href="#how-we-work">Как мы работаем</a>
+      </li>
+      <li class="menu-item">
+        <a href="#products">Продукты</a>
+      </li>
+      <li class="menu-item">
+        <a href="#chess">Что вы получите?</a>
+      </li>
+    </ul>
+  </div>
+  
+  <!-- feedback-modal -->
+  <div id="feedback-modal" class="feedback-modal modal-window">
+    <div class="modal-area">
+      <div class="modal-close">
+        <div class="close"></div>
+      </div>
+      <div class="title">Оставить заявку</div>
+      <div class="underline"></div>
+      <form id="modal-form" class="modal-form mrgn-top30" method="post" action="">
+        <input type="text" name="name" class="input-field name" placeholder="Введите имя" required>
+        <input type="text" name="phone" class="input-field phone" placeholder="Номер телефона" required>
+        <input type="email" name="email" class="input-field email" placeholder="E-mail" required>
+        <textarea name="message" id="textarea" class="message" placeholder="Сообщение"></textarea>
+        <input type="checkbox" name="checkbox" class="custom-checkbox" id="checkbox-feedback-modal" checked onchange="document.querySelector('.modal-btn').disabled = !this.checked;">
+        <label for="checkbox-feedback-modal" class="custom-checkbox-label"></label>
+        <span class="checkbox-text">Согласен с <span class="privacy-policy-btn">политикой обработки персональных данных</span></span>
+        <input type="submit" class="btn modal-btn" value="Отправить">
+      </form>
+    </div>
+  </div>
+
+  <script src='libs/air-datepicker/air-datepicker.js'></script>
+  <script type="module" src="js/app.min.js"></script>
+
+</body>
+</html>

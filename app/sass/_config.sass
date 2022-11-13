@@ -1,24 +1,24 @@
 // USER VARIABLES SECTION
 
 $accent: #3579d6 // Accent Color
-$greycolor: #2c2c2c // Grey Color
+//$greycolor: #2c2c2c // Grey Color
 $lightgreycolor: #cedcec // Light Grey Color
 $lightbluecolor: #ecf2f9 // Light Blue Color
 $fontsize: 16px // Font Size
-$textcolor: #2c2c2c // Text Color
-$lineheight: 1.3 // Document Line Height
-$userfont: montserrat-light, sans-serif // User Font Family
+$textcolor: #fff // Text Color
+$lineheight: 1.4 // Document Line Height
+$userfont: jost-regular, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
-$grid-gutter-width: 30px
+$grid-gutter-width: 24px
 $gutter: $grid-gutter-width
 
 // IMPORT SECTION
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
-@import 'app/libs/photoswipe/photoswipe' // swiper css
+@import 'app/libs/photoswipe/src/photoswipe' // swiper css
 @import 'app/libs/air-datepicker/air-datepicker' // air datepicker css
 @import 'app/libs/swiper/swiper-bundle' // swiper css
 
@@ -31,9 +31,10 @@ $gutter: $grid-gutter-width
     font-weight: $fweight
     src: url($furl) format('woff2')
 
-@include font('montserrat-light', normal, 400, '../fonts/montserrat-light.woff2')
-@include font('montserrat-medium', normal, 400, '../fonts/montserrat-medium.woff2')
-@include font('montserrat-bold', normal, 400, '../fonts/montserrat-bold.woff2')
+@include font('jost-light', normal, 400, '../fonts/jost-light.woff2')
+@include font('jost-regular', normal, 400, '../fonts/jost-regular.woff2')
+@include font('jost-medium', normal, 400, '../fonts/jost-medium.woff2')
+@include font('jost-bold', normal, 400, '../fonts/jost-bold.woff2')
 
 // GENERAL DOCUMENT STYLES
 

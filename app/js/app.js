@@ -1,8 +1,9 @@
+// copy folder module from node_modules to app/libs
 import PhotoSwipeLightbox from '../../libs/photoswipe/dist/photoswipe-lightbox.esm.js';
 import Swiper from '../../libs/swiper/swiper-bundle.esm.browser.min.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-
+/*
   // air datepicker
   let now = new Date();
   let year = now.getFullYear();
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   lightbox.init();
   
-
+*/
   // Мобильное меню
   let burgerMenuWrapper = document.querySelector('.burger-menu-wrapper'),
       mobileMenu = document.querySelector('.mobile-menu'),

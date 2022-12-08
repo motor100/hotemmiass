@@ -63,7 +63,12 @@ ul {
 .position-relative {
   position: relative;
 }
-
+.section-title {
+  margin: 0 0 64px 0;
+  font-family: 'jost-bold';
+  font-size: 62px;
+  text-transform: uppercase;
+}
 
 
 .header {
@@ -232,11 +237,7 @@ ul {
   padding: 230px 0 100px 0;
 }
 .rooms-section .section-title {
-  margin: 0 0 64px 0;
-  font-family: 'jost-bold';
-  font-size: 64px;
   color: #211F1F;
-  text-transform: uppercase;
 }
 .rooms-section .rooms-item {
   // height: 442px;
@@ -308,6 +309,142 @@ ul {
 .about-section .about-list-image img {
   width: 100%;
 }
+
+
+// advantages-section
+.advantages-section {
+  padding: 64px 0;
+}
+.advantages-section .section-title {
+  color: #211F1F;
+}
+.advantages-section .advantages-item {
+  display: flex;
+  justify-content: space-between;
+}
+.advantages-section .advantages-item {
+  margin: 0 0 50px 0;
+  // padding: 10%;
+  padding: 8%;
+  border-radius: 30px;
+  background-color: #211F1F;
+}
+.advantages-section .advantages-item-small-text {
+  font-family: 'jost-light';
+  // font-size: 20px;
+  font-size: 18px;
+  font-style: italic;
+}
+.advantages-section .advantages-item-big-text {
+  font-family: 'jost-medium';
+  // font-size: 24px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.advantages-section .advantages-item-icon {
+  width: 50px;
+  // height: 50px;
+}
+.advantages-section .advantages-item-icon img {
+  width: 100%;
+}
+
+
+// near-section
+.near-section {
+  padding: 64px 0;
+  background-color: #211F1F;
+}
+.near-section .turgoyak {
+  height: 600px;
+  border-radius: 30px;
+  background: url(../images/dist/near-turgoyak.jpg) center no-repeat;
+}
+.near-section .big-item-content {
+  // padding: 32px;
+  padding: 5%;
+  border-radius: 30px;
+  background-color: #0195D6;
+}
+.near-section .big-item-content .place-time {
+  margin: 0 0 9px 0;
+}
+.near-section .big-item-content .place-time-image {
+  width: 32px;
+  margin: 0 10px 0 0;
+}
+.near-section .big-item-content .place-text {
+  font-size: 22px;
+  font-style: italic;
+}
+.near-section .place {
+  display: flex;
+  justify-content: space-between;
+}
+.near-section .big-item-content .place-name {
+  font-family: 'jost-medium';
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.near-section .big-item-content .place-icon {
+  width: 42px;
+}
+.near-section .small-item {
+  height: 285px;
+  margin: 0 0 30px 0;
+  border-radius: 30px;
+}
+.near-section .centr-goroda {
+  background: url(../images/dist/near-centr-goroda.jpg) center no-repeat;
+}
+.near-section .solnechnaya-dolina {
+  background: url(../images/dist/near-solnechnaya-dolina.jpg) center no-repeat;
+}
+.near-section .kafe-i-restorany {
+  background: url(../images/dist/near-kafe-i-restorany.jpg) center no-repeat;
+}
+.near-section .zapovednik {
+  background: url(../images/dist/near-zapovednik.jpg) center no-repeat;
+}
+.near-section .small-item-content {
+  padding: 5%;
+  border-radius: 30px;
+}
+.near-section .centr-goroda .small-item-content {
+  background-color: #816347;
+}
+.near-section .solnechnaya-dolina .small-item-content {
+  background-color: #0EB550;
+}
+.near-section .kafe-i-restorany .small-item-content {
+  background-color: #564644;
+}
+.near-section .zapovednik .small-item-content {
+  background-color: #fff;
+  color: #211F1F;
+}
+.near-section .small-item-content .place-time-image {
+  width: 22px;
+  margin: 0 8px 0 0;
+}
+.near-section .small-item-content .place-time {
+  margin: 0 0 5px 0;
+}
+.near-section .small-item-content .place-name {
+  font-family: 'jost-medium';
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.near-section .small-item-content .place-icon {
+  width: 20px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -639,6 +776,12 @@ ul {
 @media only screen and (max-width : 1400px) {
   .rooms-section .rooms-item-title {
     font-size: 19px;
+  }
+  .near-section .big-item-content .place-text {
+    font-size: 20px;
+  }
+  .near-section .small-item-content .place-name {
+    font-size: 16px;
   }
   
 }

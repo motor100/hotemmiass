@@ -33,34 +33,30 @@
         </div>
         <div class="col-md-5">
           <div class="header-address">г. Миасс, улица Богдана Хмельницкого 86</div>
-          <div class="top-menu">
-            <div class="menu">
-              <ul class="menu">
-                <li class="menu-item">
-                  <a href="#about">О гостинице</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#rooms">Номера</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#contacts">Контакты</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <ul class="top-menu">
+            <li class="menu-item">
+              <a href="#about">О гостинице</a>
+            </li>
+            <li class="menu-item">
+              <a href="#rooms">Номера</a>
+            </li>
+            <li class="menu-item">
+              <a href="#contacts">Контакты</a>
+            </li>
+          </ul>
         </div>
         <div class="col-md-5">
           <div class="header-contacts">
             <div class="header-phone">
-              <span class="header-phone__text">Номер для брони:&nbsp;</span>
-              <a href="tel:+79617964972" class="header-phone__link">7 (961) 796 49 72</a>
+              <span class="header-phone-text">Номер для брони:&nbsp;</span>
+              <a href="tel:+79617964972" class="header-phone-link">7 (961) 796 49 72</a>
           </div>
             <div class="header-social-icons">
-              <a href="#" class="social-icon__link">
-                <img src="images/viber-icon.png" class="social-icon__image" alt="">
+              <a href="#" class="social-icon-link">
+                <img src="images/viber-icon.png" class="social-icon-image" alt="">
               </a>
-              <a href="#" class="social-icon__link">
-                <img src="images/whatsapp-icon.png" class="social-icon__image" alt="">
+              <a href="#" class="social-icon-link">
+                <img src="images/whatsapp-icon.png" class="social-icon-image" alt="">
               </a>
             </div>
           </div>
@@ -68,6 +64,8 @@
         </div>
       </div>
     </div>
+
+    <div class="background-blur"></div>
     
   </header>
 
@@ -81,7 +79,7 @@
       <div class="order-title">Бронирование номеров</div>
       <div class="form-group">
         <div class="input-wrapper start-date">
-          <input type="text" name="start-date" class="input input-start-date" placeholder="Заезд">
+          <input type="text" id="start-date" name="start-date" class="input input-start-date" placeholder="Заезд">
         </div>
         <div class="input-wrapper guest">
           <input type="number" name="guest" class="input input-guest" placeholder="Гостей">
@@ -90,7 +88,7 @@
     </div>
   </div>
 
-  <div class="rooms-section">
+  <div id="rooms" class="rooms-section">
     <div class="container">
       <div class="section-title">Номера</div>
       <div class="rooms">
@@ -144,8 +142,10 @@
     </div>
   </div>
 
-  <div class="about-section">
-    <div class="section-title">О гостинице</div>
+  <div id="about" class="about-section">
+    <div class="container">
+      <div class="section-title">О гостинице</div>
+    </div>
     <div class="about-section-content">
       <div class="container">
         <div class="row">
@@ -212,6 +212,7 @@
         </div>
       </div>
     </div>
+    <div class="about-radius"></div>
   </div>
 
   <div class="advantages-section">
@@ -382,8 +383,9 @@
                     <div class="place">
                       <div class="place-name">Кафе и рестораны</div>
                       <div class="place-icons">
-                        <img class="place-icon" src="images/near-swim-icon.svg" alt="">
-                        <img class="place-icon" src="images/near-beach-icon.svg" alt="">
+                        <img class="place-icon" src="images/near-cup-icon.svg" alt="">
+                        <img class="place-icon" src="images/near-forkknife-icon.svg" alt="">
+                        <img class="place-icon" src="images/near-glass-icon.svg" alt="">
                       </div>
                     </div>
                   </div>
@@ -399,8 +401,9 @@
                     <div class="place">
                       <div class="place-name">Заповедник</div>
                       <div class="place-icons">
-                        <img class="place-icon" src="images/near-swim-icon.svg" alt="">
-                        <img class="place-icon" src="images/near-beach-icon.svg" alt="">
+                        <img class="place-icon" src="images/near-elk-icon.svg" alt="">
+                        <img class="place-icon" src="images/near-forest-icon.svg" alt="">
+                        <img class="place-icon" src="images/near-nature-icon.svg" alt="">
                       </div>
                     </div>
                   </div>
@@ -412,6 +415,140 @@
       </div>
     </div>
   </div>
+
+  <div id="contacts" class="contacts-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="section-title">Как нас найти</div>
+          <div class="contacts-item address">г. Миасс, улица Богдана Хмельницкого, 86</div>
+          <div class="contacts-item phone">8 800 — бронирование номеров</div>
+          <div class="contacts-item phone last-contacts-item">+7 (961) 796 49 72 — администратор</div>
+          <div class="contacts-content">
+            <div class="contacts-social-icons">
+              <a href="#" class="social-icon__link">
+                <img src="images/viber-icon.png" class="social-icon__image" alt="">
+              </a>
+              <a href="#" class="social-icon__link">
+                <img src="images/whatsapp-icon.png" class="social-icon__image" alt="">
+              </a>
+            </div>
+            <button class="contacts-callback-btn callback-btn">Перезвоните мне</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A69b8b41741d857c4624316611ce81ae52849a18c06bc66516c29979fceb95197&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonials-section">
+    <div class="container">
+      <div class="section-title">Отзывы</div>
+      <div class="testimonials">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="testimonials-item">
+              <div class="testimonials-item-name">Ася Сиянова</div>
+              <div class="testimonials-item-text">Достаточно удобное расположение, красивый просторный и хорошо обставленный номер. На этаже кухонная зона, где нельзя готовить, но можно разогреть еду и комфортно расположиться за столом. Близость к оживленной дороге не мешала, транспорт слышно не было.. в отличие от того, что происходит на этаже, к сожалению. Утром были разбужены грохотом уборки соседних номеров, вечером слышали всех соседей. Но в целом мы остались довольны.</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonials-item">
+              <div class="testimonials-item-name">Дарья Мальцева</div>
+              <div class="testimonials-item-text">Были проездом, хорошая работа персонала и чистый номер, рекомендую.</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonials-item">
+              <div class="testimonials-item-name">Алексей К</div>
+              <div class="testimonials-item-text">Останавливались с семьёй в данной гостинице. Очень понравилось! Чисто, уютно, вежливый персонал! На этаже есть кухня, на которой можно самостоятельно приготовить. Стоянка с видеонаблюдением! В номере есть холодильник, телевизор, фен, тапочки и средства гигиены. Громадная душевая!) Рекомендую!!!!</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonials-item">
+              <div class="testimonials-item-name">Анна Милешкина</div>
+              <div class="testimonials-item-text">Выбрали отель поближе к Тургояку и не пожалели! В номере чисто, уютно, комфортно, тихо! Всё необходимое прямо в номере! Правда очень не хватало передвижного столика, но это ничуть не испортило впечатление об отдыхе)</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonials-item">
+              <div class="testimonials-item-name">Svetlana A</div>
+              <div class="testimonials-item-text">Уютный,небольшой отель. Чисто и опрятно. Номера уютные. Есть душ и туалет в номере. На этаже имеется кухня,есть микроволновая печь,чайник,посуда,вода. Всё необходимое!</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonials-item last-testimonials-item">
+              <div class="testimonials-item-name">все отзыв на 2ГИС</div>
+              <div class="testimonials-item-logo">
+                <img src="images/2gis-logo.png" alt="">
+              </div>
+              <a class="testimonials-item-link" href="https://2gis.ru/miass/firm/70000001044049076/60.141751%2C55.137136/tab/reviews?m=60.141779%2C55.136843%2F18.17" target="_blank">открыть отзывы</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="footer-address footer-title">г. Миасс, улица Богдана Хмельницкого 86</div>
+          <div class="row">
+            <div class="col-3">
+              <div class="footer-subtitle">Документы:</div>
+              <ul class="footer-documents-list">
+                <li class="footer-documents-list-item">Карточка предприятия</li>
+                <li class="footer-documents-list-item">Правила посещения</li>
+                <li class="footer-documents-list-item">Прайс-лист</li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <div class="footer-subtitle">Меню:</div>
+              <ul class="footer-menu">
+                <li class="menu-item">
+                  <a href="#about">О гостинице</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#rooms">Номера</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="footer-routes footer-title">Проложить маршрут</div>
+          <div class="map-logos">
+            <img class="footer-map-logo twogis-logo" src="images/2gis-logo.png" alt="">
+            <img class="footer-map-logo yandex-logo" src="images/yandex-logo.png" alt="">
+            <img class="footer-map-logo google-logo" src="images/google-logo.png" alt="">
+          </div>
+          <div class="footer-phone footer-title">Номер для брони: 8 800</div>
+          <div class="footer-phone footer-title">Администратор: +7 (961) 796 49 72</div>
+          <button class="footer-callback-btn callback-btn">Перезвоните мне</button>
+          <div class="privacy-policy">Политика конфиденциальности</div>
+          <div class="developer">
+            <span>Миасс, 2022</span>
+            <span>Дизайн Andrewwebnh</span>
+            <span>Поддержка Button</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-logo">
+      <img src="images/footer-logo.png" alt="">
+    </div>
+    
+  </footer>
 
 <!-- 
   <div class="fake-block"></div>
@@ -552,10 +689,6 @@
 
   <div id="chess" class="chess section"></div>
  -->
-
-  <footer class="footer">
-
-  </footer>
 
   <!-- mobile menu -->
   <div class="burger-menu-wrapper">

@@ -3,7 +3,7 @@ import PhotoSwipeLightbox from '../../libs/photoswipe/dist/photoswipe-lightbox.e
 import Swiper from '../../libs/swiper/swiper-bundle.esm.browser.min.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-/*
+
   // air datepicker
   let now = new Date();
   let year = now.getFullYear();
@@ -12,32 +12,32 @@ document.addEventListener('DOMContentLoaded', () => {
   let offset = 2;
   let max = new Date(year, month + offset, day);
 
-  new AirDatepicker('#header-in-select', {
+  new AirDatepicker('#start-date', {
     minDate: new Date(),
     maxDate: max,
     autoClose: true,
   });
 
   // swiper
-  var swiper = new Swiper(".mySwiper", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
+  // var swiper = new Swiper(".mySwiper", {
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  //   },
+  //   pagination: {
+  //     el: ".swiper-pagination",
+  //   },
+  // });
 
   // Photoswipe
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: '.my-gallery',
-    children: 'a',
-    pswpModule: () => import('../../libs/photoswipe/dist/photoswipe.esm.js')
-  });
-  lightbox.init();
+  // const lightbox = new PhotoSwipeLightbox({
+  //   gallery: '.my-gallery',
+  //   children: 'a',
+  //   pswpModule: () => import('../../libs/photoswipe/dist/photoswipe.esm.js')
+  // });
+  // lightbox.init();
   
-*/
+
   // Мобильное меню
   let burgerMenuWrapper = document.querySelector('.burger-menu-wrapper'),
       mobileMenu = document.querySelector('.mobile-menu'),

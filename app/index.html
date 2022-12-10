@@ -60,7 +60,7 @@
               </a>
             </div>
           </div>
-          <button class="header-callback-btn">Перезвоните мне</button>
+          <button class="header-callback-btn callback-btn">Перезвоните мне</button>
         </div>
       </div>
     </div>
@@ -79,10 +79,10 @@
       <div class="order-title">Бронирование номеров</div>
       <div class="form-group">
         <div class="input-wrapper start-date">
-          <input type="text" id="start-date" name="start-date" class="input input-start-date" placeholder="Заезд">
+          <input type="text" id="start-date" name="start-date" class="input input-start-date" placeholder="Заезд" required>
         </div>
         <div class="input-wrapper guest">
-          <input type="number" name="guest" class="input input-guest" placeholder="Гостей">
+          <input type="number" name="guest" class="input input-guest" min="1" max="10" placeholder="Гостей" required>
         </div>
       </div>
     </div>
@@ -267,44 +267,44 @@
           <div class="col-md-3">
             <div class="advantages-item">
               <div class="advantages-item-text">
-                <div class="advantages-item-small-text">бесплатный</div>
-                <div class="advantages-item-big-text">WI-FI</div>
+                <div class="advantages-item-small-text">быстрая</div>
+                <div class="advantages-item-big-text">Прачечная</div>
               </div>
               <div class="advantages-item-icon">
-                <img src="images/advantages-wifi-icon.svg" alt="">
+                <img src="images/advantages-washing-icon.svg" alt="">
               </div>
             </div>
           </div>
           <div class="col-md-3">
             <div class="advantages-item">
               <div class="advantages-item-text">
-                <div class="advantages-item-small-text">большая</div>
-                <div class="advantages-item-big-text">Автопарковка</div>
+                <div class="advantages-item-small-text">уютная</div>
+                <div class="advantages-item-big-text">Кухня</div>
               </div>
               <div class="advantages-item-icon">
-                <img src="images/advantages-parking-icon.svg" alt="">
+                <img src="images/advantages-kitchen-icon.svg" alt="">
               </div>
             </div>
           </div>
           <div class="col-md-3">
             <div class="advantages-item">
               <div class="advantages-item-text">
-                <div class="advantages-item-small-text">круглосуточное</div>
-                <div class="advantages-item-big-text">Видеонаблюдение</div>
+                <div class="advantages-item-small-text">удобное</div>
+                <div class="advantages-item-big-text">Расположение</div>
               </div>
               <div class="advantages-item-icon">
-                <img src="images/advantages-video-icon.svg" alt="">
+                <img src="images/advantages-compass-icon.svg" alt="">
               </div>
             </div>
           </div>
           <div class="col-md-3">
             <div class="advantages-item">
               <div class="advantages-item-text">
-                <div class="advantages-item-small-text">кабельное</div>
-                <div class="advantages-item-big-text">Телевидение</div>
+                <div class="advantages-item-small-text">качественный</div>
+                <div class="advantages-item-big-text">Сервис</div>
               </div>
               <div class="advantages-item-icon">
-                <img src="images/advantages-tv-icon.svg" alt="">
+                <img src="images/advantages-service-icon.svg" alt="">
               </div>
             </div>
           </div>
@@ -536,18 +536,16 @@
           <button class="footer-callback-btn callback-btn">Перезвоните мне</button>
           <div class="privacy-policy">Политика конфиденциальности</div>
           <div class="developer">
-            <span>Миасс, 2022</span>
-            <span>Дизайн Andrewwebnh</span>
-            <span>Поддержка Button</span>
+            <span class="city-year">Миасс</span>
+            <a href="https://nhfuture.ru/" target="_blank">Дизайн Andrewwebnh</a>
+            <a href="https://mybutton.ru/" target="_blank">Поддержка Button</a>
           </div>
-
         </div>
       </div>
     </div>
     <div class="footer-logo">
       <img src="images/footer-logo.png" alt="">
     </div>
-    
   </footer>
 
 <!-- 
@@ -714,23 +712,26 @@
   </div>
   
   <!-- feedback-modal -->
-  <div id="feedback-modal" class="feedback-modal modal-window">
-    <div class="modal-area">
-      <div class="modal-close">
-        <div class="close"></div>
+  <div id="callback-modal" class="modal-window callback-modal" style="display: block;">
+    <div class="modal-wrapper active">
+      <div class="modal-area">
+        <div class="modal-close">
+          <div class="close"></div>
+        </div>
+        <div class="modal-title">Заполните форму</div>
+        <form id="tcallback-modal-form" class="form" method="post">
+          <label for="callback-name" class="label">Ваше имя</label>
+          <input type="text" id="callback-name" class="input-field first-input-field" name="name" minlength="3" maxlength="20" required>
+          
+          <label for="callback-phone" class="label">Ваш телефон</label>
+          <input type="text" id="callback-phone" class="input-field" name="phone" required minlength="3" maxlength="30">
+          
+          <input type="checkbox" name="checkbox" class="custom-checkbox" id="checkbox-callback-modal" checked required onchange="document.querySelector('.js-callback-modal-btn').disabled = !this.checked;">
+          <label for="checkbox-callback-modal" class="custom-checkbox-label"></label>
+          <span class="checkbox-text">Согласен с <a href="/politika-konfidencialnosti" class="privacy-policy-btn" target="_blank">политикой обработки персональных данных</a></span>
+          <input type="button" class="submit-btn js-callback-modal-btn" value="Отправить">
+        </form>
       </div>
-      <div class="title">Оставить заявку</div>
-      <div class="underline"></div>
-      <form id="modal-form" class="modal-form mrgn-top30" method="post" action="">
-        <input type="text" name="name" class="input-field name" placeholder="Введите имя" required>
-        <input type="text" name="phone" class="input-field phone" placeholder="Номер телефона" required>
-        <input type="email" name="email" class="input-field email" placeholder="E-mail" required>
-        <textarea name="message" id="textarea" class="message" placeholder="Сообщение"></textarea>
-        <input type="checkbox" name="checkbox" class="custom-checkbox" id="checkbox-feedback-modal" checked onchange="document.querySelector('.modal-btn').disabled = !this.checked;">
-        <label for="checkbox-feedback-modal" class="custom-checkbox-label"></label>
-        <span class="checkbox-text">Согласен с <span class="privacy-policy-btn">политикой обработки персональных данных</span></span>
-        <input type="submit" class="btn modal-btn" value="Отправить">
-      </form>
     </div>
   </div>
 

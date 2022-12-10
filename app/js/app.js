@@ -4,6 +4,9 @@ import Swiper from '../../libs/swiper/swiper-bundle.esm.browser.min.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Общие переменные
+  let body = document.querySelector('body');
+
   // air datepicker
   let now = new Date();
   let year = now.getFullYear();
@@ -64,90 +67,52 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(function() {location.href = hrefClick}, 700);
   }
 
- 
-
   // Окна
-  let btns = document.querySelectorAll('.btn-click'),
-      privacyPolicyBtn = document.querySelectorAll('.privacy-policy-btn'),
-      feedbackModal = document.querySelector('#feedback-modal'),
-      chess1Modal = document.querySelector('#chess1-modal'),
-      chess2Modal = document.querySelector('#chess2-modal'),
-      chess3Modal = document.querySelector('#chess3-modal'),
-      chess4Modal = document.querySelector('#chess4-modal'),
-      mahankovModal = document.querySelector('#mahankov-modal'),
-      privacyPolicyModal = document.querySelector('#privacy-policy-modal'),
-      modal = document.querySelectorAll('.modal'),
-      modalCloseBtn = document.querySelectorAll('.modal-close'),
-      teamPhoto = document.querySelectorAll('.team-item .photo'),
-      more = document.querySelectorAll('.more');
+  let callbackBtn = document.querySelectorAll('.callback-btn'),
+      callbackModal = document.querySelector('#callback-modal'),
+      modalWindow = document.querySelectorAll('.modal-window'),
+      modalCloseBtn = document.querySelectorAll('.modal-window .modal-close');
 
   // Открытие окна обратной связи
-  // for (let i = 0; i < btns.length; i++) {
-  //   btns[i].onclick = function() {
-  //     modalOpen(feedbackModal);
-  //   }
-  // }
-  
-  // Открытие окон шахматки chess
-  // more[0].onclick = function() {
-  //   modalOpen(chess1Modal);
-  // }
-  // more[1].onclick = function() {
-  //   modalOpen(chess2Modal);
-  // }
-  // more[2].onclick = function() {
-  //   modalOpen(chess3Modal);
-  // }
-  // more[3].onclick = function() {
-  //   modalOpen(chess4Modal);
-  // }
-
-  // Открытие окон команды
-  // teamPhoto[0].onclick = function() {
-  //   modalOpen(mahankovModal);
-  // }
-
-  // Открытие окна политики
-  // privacyPolicyBtn[0].onclick = privacyPolicyBtn[1].onclick = privacyPolicyModalOpen;
-
-  function privacyPolicyModalOpen() {
-    modalClose(modal[0]);
-    modalOpen(privacyPolicyModal);
+  for (let i = 0; i < callbackBtn.length; i++) {
+    callbackBtn[i].onclick = function() {
+      modalOpen(callbackModal);
+    }
   }
 
   function modalOpen(win) {
     body.classList.add('overflow-hidden');
     win.style.display = "block";
+    win.childNodes[1].classList.add('active')
   }
   
   // Закрытие окон
-  // for (let i = 0; i < modalCloseBtn.length; i++) {
-  //   modalCloseBtn[i].onclick = function() {
-  //     modalClose(modal[i]);
-  //   }
-  // }
+  for (let i = 0; i < modalCloseBtn.length; i++) {
+    modalCloseBtn[i].onclick = function() {
+      modalClose(modalWindow[i]);
+    }
+  }
 
-  // for (let i = 0; i < modal.length; i++) {
-  //   modal[i].onclick = function(event) {
-  //     let classList = event.target.classList;
-  //     for (let j = 0; j < classList.length; j++) {
-  //       if (classList[j] == "modal") {
-  //         modalClose(modal[i])
-  //       }
-  //     }
-  //   }
-  // }
+  for (let i = 0; i < modalWindow.length; i++) {
+    modalWindow[i].onclick = function(event) {
+      let classList = event.target.classList;
+      for (let j = 0; j < classList.length; j++) {
+        if (classList[j] == "modal-window" || classList[j] == "modal-wrapper") {
+          modalClose(modalWindow[i])
+        }
+      }
+    }
+  }
 
-  function modalClose(n) {
+  function modalClose(win) {
     body.classList.remove('overflow-hidden');
-    n.style.display = "";
+    win.style.display = "";
+    win.childNodes[1].classList.remove('active');
   }
 
   // Отправка формы ajax
-  let feedbackForm = document.querySelector("#feedback-form"),
-      modalForm = document.querySelector("#modal-form"),
-      feedbackFormBtn = document.querySelector('.form-btn'),
-      modalFormBtn = document.querySelector('.modal-btn');
+  let callbackModalForm = document.querySelector("#callback-modal-form"),
+      callbackModalFormBtn = document.querySelector('.callback-modal-form-bt');
 
   // feedbackFormBtn.onclick = function(event) {
   //   ajaxSend(feedbackForm);
@@ -199,4 +164,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 
-})
+
+  // Год в футере
+  let footerCityYear = document.querySelector('.city-year');
+  footerCityYear.innerText = 'Миасс ' + year;
+
+});

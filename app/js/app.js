@@ -1,7 +1,3 @@
-// copy folder module from node_modules to app/libs
-import PhotoSwipeLightbox from '../../libs/photoswipe/dist/photoswipe-lightbox.esm.js';
-import Swiper from '../../libs/swiper/swiper-bundle.esm.browser.min.js';
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // Общие переменные
@@ -21,6 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
     autoClose: true,
   });
 
+
+  // room description
+  let roomsItemContent = document.querySelectorAll('.rooms-item-content');
+
+  roomsItemContent.forEach((item) => {
+    item.onclick = function(){
+      item.classList.toggle('active');
+    }
+  });
+
+  
+
+
+
+
   // swiper
   // var swiper = new Swiper(".mySwiper", {
   //   navigation: {
@@ -33,8 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // });
 
   // Photoswipe
+
   // const lightbox = new PhotoSwipeLightbox({
-  //   gallery: '.my-gallery',
+  //   gallery: '.rooms-item-gallery',
   //   children: 'a',
   //   pswpModule: () => import('../../libs/photoswipe/dist/photoswipe.esm.js')
   // });
@@ -112,14 +124,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Отправка формы ajax
   let callbackModalForm = document.querySelector("#callback-modal-form"),
-      callbackModalFormBtn = document.querySelector('.callback-modal-form-bt');
+      callbackModalFormBtn = document.querySelector('.js-callback-modal-btn');
 
-  // feedbackFormBtn.onclick = function(event) {
-  //   ajaxSend(feedbackForm);
-  // }
-  // modalFormBtn.onclick = function(event) {
-  //   ajaxSend(modalForm);
-  // }
+  callbackModalFormBtn.onclick = function(event) {
+    ajaxSend(callbackModalForm);
+  }
     
   function ajaxSend(form) {  
     event.preventDefault();
@@ -144,16 +153,15 @@ document.addEventListener('DOMContentLoaded', () => {
       let formData = {
         name: form.querySelector('.name').value,
         phone: form.querySelector('.phone').value,
-        email: form.querySelector('.email').value,
-        message: form.querySelector('.message').value
+        checkbox: form.querySelector('.custom-checkbox').checked,
       };
 
       // Передача
       let request = new XMLHttpRequest();
 
-      request.open('post', "mailer.php");
+      request.open('post', "phpmailer/mailer.php");
       request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8');
-      request.send('name=' + encodeURIComponent(formData.name) + '&phone=' + encodeURIComponent(formData.phone) + '&email=' + encodeURIComponent(formData.email) + '&message=' +   encodeURIComponent(formData.message));
+      request.send('name=' + encodeURIComponent(formData.name) + '&phone=' + encodeURIComponent(formData.phone) + '&checkbox=' + encodeURIComponent(formData.checkbox));
 
       // Сообщение
       alert("Спасибо. Мы свяжемся с вами.");
@@ -164,8 +172,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 
+  // Input mask
+  let elementPhone = document.querySelector('#callback-phone');
 
-  // Год в футере
+  let maskOptionsPhone = {
+    mask: '+{7} (000) 000 00 00'
+  };
+
+  let mask = IMask(elementPhone, maskOptionsPhone);
+
+
+  // Current year
   let footerCityYear = document.querySelector('.city-year');
   footerCityYear.innerText = 'Миасс ' + year;
 

@@ -6,7 +6,7 @@
   <title>Гостиница "Миасс"</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <!-- <link rel="icon" href="images/favicon.png"> -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" sizes="any">
   <link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -86,6 +86,11 @@
         </div>
       </div>
     </div>
+    <div class="main-radius"></div>
+    <div class="order-btn">
+      <span class="order-btn-text">Забронировать<br>номер</span>
+      <div class="order-btn-arrow"></div>
+      </div>
   </div>
 
   <div id="rooms" class="rooms-section">
@@ -98,9 +103,25 @@
               <div class="rooms-item-content">
                 <div class="rooms-item-category">стандарт</div>
                 <div class="rooms-item-title">Односпальная</div>
+                <div class="rooms-item-arrow"></div>
+                <div class="rooms-item-decription">
+                  <p>Количество номеров: 3</p>
+                  <p>Описание: площадь 14 кв.м., 1 комната, 1 спальное место, санузел, wi-fi, чай</p>
+                </div>
               </div>
-              <div class="rooms-item-image">
-                <img src="images/room-image.jpg" alt="">
+              <div class="rooms-item-gallery">
+                <div class="rooms-item-image">
+                  <figure class="figure">
+                    <a href="images/room-image.jpg" data-size="800x600">
+                      <img src="images/room-image.jpg" alt="">
+                    </a>
+                  </figure>
+                  <figure class="figure gallery-item hidden">
+                    <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" data-size="800x600">
+                      <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="">
+                    </a>
+                  </figure>
+                </div>
               </div>
             </div>
           </div>
@@ -109,6 +130,11 @@
               <div class="rooms-item-content">
                 <div class="rooms-item-category">стандарт</div>
                 <div class="rooms-item-title">Две односпальные</div>
+                <div class="rooms-item-arrow"></div>
+                <div class="rooms-item-decription">
+                  <p>Количество номеров: 3</p>
+                  <p>Описание: площадь 14 кв.м., 1 комната, 2 спальных места, санузел, wi-fi, чай</p>
+                </div>
               </div>
               <div class="rooms-item-image">
                 <img src="images/room-image.jpg" alt="">
@@ -120,6 +146,11 @@
               <div class="rooms-item-content">
                 <div class="rooms-item-category">комфорт</div>
                 <div class="rooms-item-title">Двухкомнатная</div>
+                <div class="rooms-item-arrow"></div>
+                <div class="rooms-item-decription">
+                  <p>Количество номеров: 3</p>
+                  <p>Описание: площадь 14 кв.м., 2 комнаты, 1 спальное место, санузел, wi-fi, чай</p>
+                </div>
               </div>
               <div class="rooms-item-image">
                 <img src="images/room-image.jpg" alt="">
@@ -131,6 +162,11 @@
               <div class="rooms-item-content">
                 <div class="rooms-item-category">комфорт ПЛЮС</div>
                 <div class="rooms-item-title">Двухкомнатная</div>
+                <div class="rooms-item-arrow"></div>
+                <div class="rooms-item-decription">
+                  <p>Количество номеров: 3</p>
+                  <p>Описание: площадь 25 кв.м., 2 комнаты, 2 спальное место, санузел, wi-fi, чай</p>
+                </div>
               </div>
               <div class="rooms-item-image">
                 <img src="images/room-image.jpg" alt="">
@@ -712,19 +748,19 @@
   </div>
   
   <!-- feedback-modal -->
-  <div id="callback-modal" class="modal-window callback-modal" style="display: block;">
-    <div class="modal-wrapper active">
+  <div id="callback-modal" class="modal-window callback-modal">
+    <div class="modal-wrapper">
       <div class="modal-area">
         <div class="modal-close">
           <div class="close"></div>
         </div>
         <div class="modal-title">Заполните форму</div>
-        <form id="tcallback-modal-form" class="form" method="post">
+        <form id="callback-modal-form" class="form" method="post">
           <label for="callback-name" class="label">Ваше имя</label>
-          <input type="text" id="callback-name" class="input-field first-input-field" name="name" minlength="3" maxlength="20" required>
+          <input type="text" id="callback-name" class="name input-field first-input-field" name="name" minlength="3" maxlength="20" required>
           
           <label for="callback-phone" class="label">Ваш телефон</label>
-          <input type="text" id="callback-phone" class="input-field" name="phone" required minlength="3" maxlength="30">
+          <input type="text" id="callback-phone" class="phone input-field" name="phone" required minlength="3" maxlength="30">
           
           <input type="checkbox" name="checkbox" class="custom-checkbox" id="checkbox-callback-modal" checked required onchange="document.querySelector('.js-callback-modal-btn').disabled = !this.checked;">
           <label for="checkbox-callback-modal" class="custom-checkbox-label"></label>
@@ -735,8 +771,51 @@
     </div>
   </div>
 
+  <!-- pswp -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div> 
+        </div>
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src='libs/air-datepicker/air-datepicker.js'></script>
-  <script type="module" src="js/app.min.js"></script>
+  <!-- <script type="module" src='libs/photoswipe/dist/photoswipe.esm.min.js'></script>
+  <script type="module" src='libs/photoswipe/dist/photoswipe-lightbox.esm.min.js'></script> -->
+  <script src='libs/photoswipe/photoswipe.min.js'></script>
+  <script src='libs/photoswipe/photoswipe-ui-default.min.js'></script>
+  <script src='libs/photoswipe/pswp.js'></script>
+  <script src='libs/swiper/swiper-bundle.min.js'></script>
+  <script src='libs/imask/imask.js'></script>
+  <script src="js/app.min.js"></script>
 
 </body>
 </html>

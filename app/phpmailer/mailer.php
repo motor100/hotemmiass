@@ -1,5 +1,4 @@
 <?php
-
 $name = htmlspecialchars($_POST["name"]);
 $phone = htmlspecialchars($_POST["phone"]);
 $checkbox = $_POST["checkbox"];

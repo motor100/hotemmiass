@@ -63,6 +63,12 @@ ul {
 .position-relative {
   position: relative;
 }
+.container-fluid {
+  --bs-gutter-x: 100px;
+}
+.section {
+  padding: 64px 0;
+}
 .section-title {
   margin: 0 0 64px 0;
   font-family: 'jost-bold';
@@ -71,12 +77,23 @@ ul {
 }
 .callback-btn {
   width: 100%;
+  max-width: 374px;
   height: 75px;
   padding: 0;
   border-radius: 30px;
   background-color: transparent;
   font-size: 26px;
   text-transform: uppercase;
+}
+.background-blur {
+  width: 100%;
+  height: 165px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(197,197,197,.2);
+  backdrop-filter: blur(5px);
+  z-index: -1;
 }
 .air-datepicker {
   font-family: 'jost-medium';
@@ -94,7 +111,7 @@ ul {
   background: #564644;
 }
 
-
+// header
 .header {
   position: absolute;
   top: 0;
@@ -103,16 +120,6 @@ ul {
   height: 165px;
   padding: 20px 0 33px 0;
   z-index: 1;
-}
-.header .background-blur {
-  width: 100%;
-  height: 165px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(197,197,197,.2);
-  backdrop-filter: blur(5px);
-  z-index: -1;
 }
 .header .horizontal-line-wrapper {
   position: relative;
@@ -131,6 +138,7 @@ ul {
 }
 .header .header-address {
   margin: 0 0 45px 0;
+  color: #fff;
 }
 .header .header-contacts {
   display: flex;
@@ -140,6 +148,7 @@ ul {
 }
 .header .header-contacts .header-phone {
   margin: 0 20px 0 0;
+  color: #fff;
 }
 .header .header-contacts .header-phone-link {
   color: #fff;
@@ -152,7 +161,6 @@ ul {
 }
 .header .header-callback-btn {
   display: block;
-  max-width: 374px;
   height: 58px;
   margin: 0 0 0 auto;
   padding: 0;
@@ -202,6 +210,9 @@ ul {
   margin: 0 auto;
   padding: 265px 0 0 0;
 }
+.main-section .logo img {
+  width: 100%;
+}
 .main-section .order {
   position: absolute;
   bottom: -50px;
@@ -219,7 +230,6 @@ ul {
   margin: 0 0 25px 0;
   font-family: 'jost-light';
   font-size: 24px;
-  color: #211F1F;
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -241,7 +251,6 @@ ul {
   border-right: none;
   border-bottom: 1px solid #211F1F;
   border-left: none;
-  color: #211f1f;
 }
 .main-section .form-group .input::placeholder {
   font-family: 'jost-light';
@@ -296,7 +305,6 @@ ul {
 .main-section .order-btn-text {
   font-family: 'jost-light';
   font-size: 18px;
-  color: #211F1F;
   text-align: right;
   text-transform: uppercase;
 }
@@ -329,17 +337,11 @@ ul {
 
 
 // rooms
-.rooms-section {
-  // padding: 230px 0 100px 0;
-  padding: 64px 0 100px 0;
-}
-.rooms-section .section-title {
-  color: #211F1F;
-}
 .rooms-section .rooms-item {
-  // height: 442px;
+  margin: 0 0 20px 0;
   border-radius: 30px;
   background-color: #211F1F;
+  color: #fff;
 }
 .rooms-section .rooms-item-content {
   position: relative;
@@ -446,7 +448,6 @@ ul {
 }
 .about-section .section-title {
   position: relative;
-  color: #211f1f;
   z-index: 1;
 }
 .about-section .about-radius {
@@ -460,6 +461,7 @@ ul {
 }
 .about-section .about-section-content {
   font-size: 22px;
+  color: #fff;
   line-height: 1.3;
 }
 .about-section .list-title {
@@ -505,11 +507,19 @@ ul {
   background: url(../images/about-rectangle.png) center no-repeat;
   background-size: contain;
 }
+.about-section .about-slider {
+  height: 100%;
+}
 .about-section .about-slider .slider-item-image {
   width: 100%;
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
+}
+.about-section .about-slider .slider-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .about-section .about-slider .swiper-button-next,
 .about-section .about-slider .swiper-button-prev {
@@ -519,23 +529,15 @@ ul {
   background-color: #fff;
   border-radius: 50%;
 }
-
 .about-section .about-slider .swiper-button-next::after,
 .about-section .about-slider .swiper-button-prev::after {
   font-size: 16px;
 }
 
-
-
 // advantages-section
-.advantages-section {
-  padding: 64px 0;
-}
-.advantages-section .section-title {
-  color: #211F1F;
-}
 .advantages-section .advantages-item {
   display: flex;
+  color: #fff;
   justify-content: space-between;
 }
 .advantages-section .advantages-item {
@@ -567,17 +569,19 @@ ul {
   object-fit: contain;
 }
 
-
 // near-section
 .near-section {
   position: relative;
-  padding: 64px 0;
   background-color: #211F1F;
+  color: #fff;
   z-index: 1;
 }
-.near-section .turgoyak {
-  height: 600px;
+.near-section .item {
   border-radius: 30px;
+  background-size: cover !important;
+}
+.near-section .turgoyak {
+  height: 800px;
   background: url(../images/dist/near-turgoyak.jpg) center no-repeat;
 }
 .near-section .big-item-content {
@@ -610,9 +614,8 @@ ul {
   width: 42px;
 }
 .near-section .small-item {
-  height: 285px;
+  height: 385px;
   margin: 0 0 30px 0;
-  border-radius: 30px;
 }
 .near-section .centr-goroda {
   background: url(../images/dist/near-centr-goroda.jpg) center no-repeat;
@@ -679,12 +682,7 @@ ul {
   z-index: -1;
 }
 
-
-// rooms-section
-.contacts-section {
-  padding: 64px 0;
-  color: #211f1f;
-}
+// contacts-section
 .contacts-section .contacts-item {
   margin: 0 0 16px 0;
   font-size: 26px;
@@ -720,32 +718,29 @@ ul {
   overflow: hidden;
 }
 
-
-// testimonials
-.testimonials-section {
-  padding: 64px 0;
-  color: #211F1F;
-}
-.testimonials .testimonials-item {
+// testimonials-section
+.testimonials-section .testimonials-item {
   min-height: 378px;
   margin: 0 0 32px 0;
   padding: 7%;
   border: 2px solid #211F1F;
   border-radius: 30px;
 }
-.testimonials .testimonials-item-name {
+.testimonials-section .testimonials-item-name {
   margin: 0 0 16px 0;
   font-size: 28px;
 }
-.testimonials .testimonials-item-logo {
-  width: 80%;
+.testimonials-section .testimonials-item-logo {
+  width: 100%;
+  max-width: 270px;
 }
-.testimonials .testimonials-item-logo img {
+.testimonials-section .testimonials-item-logo img {
   width: 100%;
 }
-.testimonials .testimonials-item-link {
+.testimonials-section .testimonials-item-link {
   display: block;
-  width: 80%;
+  width: 100%;
+  max-width: 270px;
   padding: 10px 0;
   border-radius: 30px;
   background-color: #211F1F;
@@ -755,22 +750,21 @@ ul {
   text-align: center;
   text-transform: uppercase;
 }
-.testimonials .last-testimonials-item {
+.testimonials-section .last-testimonials-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
-.testimonials .last-testimonials-item .testimonials-item-name {
+.testimonials-section .last-testimonials-item .testimonials-item-name {
   margin: 0;
 }
-
 
 // footer
 .footer {
   position: relative;
-  padding: 64px 0;
   background-color: #211F1F;
+  color: #fff;
 }
 .footer .footer-logo {
   position: absolute;
@@ -937,23 +931,34 @@ ul {
 .burger-menu-wrapper .burger-menu:after {
   content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   display: block;
-  width: 100%;
   height: 3px;
+  margin: 0 0 0 auto;
   border-radius: 2px;
-  background-color: #8278B8;
+  background-color: #fff;
   transition: all .5s;
+}
+.burger-menu-wrapper span {
+  top: 13px;
+  width: 20px;
 }
 .burger-menu-wrapper .burger-menu:before {
   top: 6px;
+  width: 14px;
 }
 .burger-menu-wrapper .burger-menu:after {
   top: 20px;
+  width: 26px;
+}
+.burger-menu-wrapper .close span {
+  display: none;
 }
 .burger-menu-wrapper .close:before,
 .burger-menu-wrapper .close:after {
   top: 12px;
+  width: 28px;
+  background-color: #211F1F;
 }
 .burger-menu-wrapper .close:before {
   transform: rotate(-45deg);
@@ -968,29 +973,53 @@ ul {
   left: 0;
   width: 100%;
   height: 100vh;
-  padding: 130px 30px 30px 30px;
+  padding: 30px 15px;
   background-color: #fff;
   z-index: 9;
   opacity: 0;
   visibility: hidden;
   transition: all 1s;
 }
+.mobile-menu .logo {
+  width: 140px;
+  margin: 0 auto 32px auto;
+}
+.mobile-menu .address {
+  margin: 0 0 50px 0;
+  font-size: 18px;
+  text-align: center;
+}
 .mobile-menu .menu {
-  margin: 0 0 64px 0;
+  margin: 0 0 50px 0;
   padding: 0;
   list-style: none;
 }
 .mobile-menu .menu-item {
-  padding: 10px 0;
+  margin: 0 0 15px 0;
 }
 .mobile-menu .menu-item a {
-  color: #3E3E3E;
+  font-size: 25px;
+  color: #211F1F;
+  text-transform: uppercase;
 }
-.mobile-menu .phone-text {
-  color: #3E3E3E;
+.mobile-menu .phone {
+  margin: 0 0 16px 0;
 }
-.mobile-menu .phone-text {
-  border-bottom: 1px solid #8278B8;
+.mobile-menu .phone .phone-link {
+  color: #211F1F;
+}
+.mobile-menu .social-icons {
+  margin: 0 0 32px 0;
+}
+.mobile-menu .social-icons .social-icon-link {
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+.mobile-menu .social-icons .social-icon-image {
+  width: 25px;
+}
+.mobile-menu .mobile-menu-callback-btn {
+  border: 1px solid #211f1f;
 }
 .mobile-menu-open {
   opacity: 1;
@@ -1068,7 +1097,6 @@ ul {
 .modal-window .modal-title {
   margin: 0 0 20px 0;
   font-size: 30px;
-  color: #211F1F;
   text-align: center;
   text-transform: uppercase;
 }
@@ -1089,7 +1117,6 @@ ul {
   border-left: none;
   font-family: inherit;
   font-size: 18px;
-  color: #211F1F;
 }
 .modal-window .first-input-field {
   margin: 0 0 35px 0;
@@ -1107,7 +1134,6 @@ ul {
   display: block;
   margin: 0 0 30px 0;
   font-size: 12px;
-  color: #211F1F;
   line-height: 1.4;
 }
 .modal-window .privacy-policy-btn {
@@ -1157,19 +1183,15 @@ ul {
   display: block;
 }
 
-
-
-
-
-
-
-
-
-
-
 @media only screen and (max-width : 1400px) {
   .rooms-section .rooms-item-title {
     font-size: 19px;
+  }
+  .near-section .turgoyak {
+    height: 600px;
+  }
+  .near-section .small-item {
+    height: 285px;
   }
   .near-section .big-item-content .place-text {
     font-size: 20px;
@@ -1177,18 +1199,25 @@ ul {
   .near-section .small-item-content .place-name {
     font-size: 16px;
   }
-  
+  .testimonials-section .testimonials-item {
+    min-height: 405px;
+  }
 }
-
 
 @media only screen and (max-width : 1200px) {
   .header .top-menu .menu-item a {
     font-size: 18px;
   }
+  .testimonials-section .testimonials-item {
+    min-height: 460px;
+  }
   
 }
 
 @media only screen and (max-width : 992px) {
+  .container-fluid {
+    --bs-gutter-x: 24px;
+  }
   .header {
     .menu .menu-item a {
       font-size: 13px;
@@ -1203,55 +1232,14 @@ ul {
       padding: 200px 0 10px 0;
     }
   }
-  .how-we-work {
-    .step-item .number {
-      font-size: 110px;
-    }
-    .title {
-      padding: 0;
-      font-size: 14px;
-    }
-    .description {
-      font-size: 14px;
-    }    
+  .testimonials-section .testimonials-item {
+    min-height: 380px;
   }
-  .products {
-    .products-item .item-title {
-      min-height: 91px;
-    }
-    .products-item .item-button {
-      padding: 15px;
-    }
-    .products-item .item-button .btn {
-      font-size: 13px;
-    }
+  .contacts-section .contacts-item {
+    font-size: 22px;
   }
-  .team {
-    .team-item .photo {
-      height: 150px;
-    }
-    .top-row .team-item .photo {
-      width: 250px;
-      height: 250px;
-    }
-  }
-  .chess {
-    .rectangle {
-      padding: 30px;
-    }
-    .title {
-      font-size: 16px;
-      min-height: 150px;
-    }
-    .rectangles .more {
-      font-size: 14px;
-      width: 150px;
-    }
-  }
-  .form {
-    .photo {
-      display: none;
-    }
+  .contacts-section .map {
+    height: 400px;
   }
 }
 
@@ -1265,137 +1253,66 @@ ul {
   .section {
     padding: 60px 0;
   }
-  // .header {
-  //   padding-top: 30px;
-  //   .logo {
-  //     width: 40%;
-  //   }
-  //   .top-menu {
-  //     display: none;
-  //   }
-  //   .button-wrapper {
-  //     display: none;
-  //   }
-  // }
-  /*
-  .main {
-    background: none;
+  .section-title {
+    margin: 0 0 16px 0;
+    text-align: center;
+  }
+  .background-blur {
+    height: 200px;
+    z-index: 0;
+  }
+  .main-section {
+    height: 475px;
+  }
+  .main-section .logo {
+    position: relative;
+    width: 150px;
     height: auto;
-    .title {
-      font-size: 34px;
-      padding: 100px 0 10px 0;
-      text-align: center;
-    }
-    .description {
-      width: 100%;
-      text-align: center;
-    }
+    padding: 45px 0 0 0;
+    z-index: 1;
   }
-  .how-we-work {
-    padding-top: 40px;
-    .step-item {
-      margin: 10px 0;
-    }
-    .step-item .number {
-      font-size: 90px;
-    }
-    .title {
-      padding-top: 10px;
-    }
+  .contacts-section .contacts-item {
+    font-size: 18px;
   }
-  .chess {
-    .rectangle {
-      border-radius: 10px;
-      margin: 5px 0;
-    }
+  .contacts-section .contacts-content {
+    display: block;
   }
-  .form {
-    .input-wrapper {
-      display: block;
-    }
-    .input-field {
-      width: 100%;
-    }
+  .contacts-section .contacts-social-icons {
+    margin: 0 0 32px 0;
   }
-  .footer {
-    .footer-text {
-      text-align: left;
-    }
-    .copyright {
-      padding-top: 30px;
-    }
+  .contacts-section .social-icon-link img {
+    width: 25px;
   }
-  .modal .title {
-    font-size: 19px;
+  .testimonials-section .testimonials-slider {
+    padding: 0 0 0 12px;
   }
-  */
+  .testimonials-section .testimonials-item {
+    width: 85%;
+    min-height: auto;
+    // margin: 0 0 16px 0;
+    padding: 16px;
+  }
+  .testimonials-section .testimonials-item-name {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+  }
+  .testimonials-section .testimonials-item-text {
+    height: 405px;
+  }
+
+
+  
 }
 
 @media only screen and (max-width : 480px) {
   .section-title {
     font-size: 30px;
   }
-  .circle {
-    width: 40px;
-    height: 40px;
+  .contacts-section .contacts-item {
+    font-size: 16px;
   }
-  .circle span {
-    top: 18px;
-    left: 6px;
+  .modal-window .modal-area {
+    padding: 50px 34px 50px 34px;
   }
-  .prev-arrow {
-    margin-right: 5px;
-  }
-  .next-arrow {
-    margin-left: 5px;
-  }
-  .prev-arrow::after,
-  .prev-arrow::before {
-    left: 4px;
-  }
-  .prev-arrow::before {
-    top: 22px;
-  }
-  .prev-arrow::after {
-    top: 14px;
-  }
-  .next-arrow::after,
-  .next-arrow::before {
-    right: 4px;
-  }
-  .next-arrow::before {
-    top: 22px;
-  }
-  .next-arrow::after {
-    top: 14px;
-  }
-  .main {
-    .title {
-      font-size: 30px;
-    }
-    .advantages-text {
-      font-size: 15px;
-    }
-  }
-  .how-we-work {
-    .step-item .number {
-      font-size: 70px;
-    }
-    .title {
-      padding-top: 7px;
-    }
-  }
-  .products {
-    .products-item .item-button .btn {
-      font-size: 15px;
-    }
-    .arrow-wrapper {
-      top: -65px;
-    }
-  }
-  .about {
-    .image img {
-      width: 80%;
-    }
-  }
+  
 }

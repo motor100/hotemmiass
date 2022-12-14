@@ -13,9 +13,9 @@
 
 <body>
 
-  <header class="header">
+  <header class="header hidden-mobile">
     <div class="horizontal-line-wrapper">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-md-10 ms-auto">
             <div class="horizontal-line-wrapper">
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="header-content">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-md-2">
             <div class="logo">
@@ -47,7 +47,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-5 hidden-mobile">
             <div class="header-contacts">
               <div class="header-phone">
                 <span class="header-phone-text">Номер для брони:&nbsp;</span>
@@ -71,7 +71,7 @@
   </header>
 
   <div class="main-section">
-    <div class="container">
+    <div class="container-fluid">
       <div class="logo">
         <img src="images/main-logo.png" alt="">
       </div>
@@ -91,15 +91,16 @@
     <div class="order-btn">
       <span class="order-btn-text">Забронировать<br>номер</span>
       <div class="order-btn-arrow"></div>
-      </div>
+    </div>
+    <div class="background-blur hidden-desktop"></div>
   </div>
 
-  <div id="rooms" class="rooms-section">
-    <div class="container">
+  <div id="rooms" class="rooms-section section">
+    <div class="container-fluid">
       <div class="section-title">Номера</div>
       <div class="rooms">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="rooms-item">
               <div class="rooms-item-content">
                 <div class="rooms-item-category">стандарт</div>
@@ -129,7 +130,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="rooms-item">
               <div class="rooms-item-content">
                 <div class="rooms-item-category">стандарт</div>
@@ -159,7 +160,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="rooms-item">
               <div class="rooms-item-content">
                 <div class="rooms-item-category">комфорт</div>
@@ -189,7 +190,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="rooms-item">
               <div class="rooms-item-content">
                 <div class="rooms-item-category">комфорт ПЛЮС</div>
@@ -226,12 +227,12 @@
 
   <div id="about" class="about-section">
     <div class="section-title-wrapper">
-      <div class="container">
+      <div class="container-fluid">
         <div class="section-title">О гостинице</div>
       </div>
     </div>    
     <div class="about-section-content">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-md-6">
             <p>Гостиница Миасс — это достойная альтернатива большим отелям, позволяющая людям тратить меньше и жить с комфортом. Номера со всеми удобствами!</p>
@@ -322,12 +323,12 @@
     <div class="about-radius"></div>
   </div>
 
-  <div class="advantages-section">
-    <div class="container">
+  <div class="advantages-section section">
+    <div class="container-fluid">
       <div class="section-title">Преимущества</div>
       <div class="advantages">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="advantages-item">
               <div class="advantages-item-text">
                 <div class="advantages-item-small-text">бесплатный</div>
@@ -338,7 +339,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="advantages-item">
               <div class="advantages-item-text">
                 <div class="advantages-item-small-text">большая</div>
@@ -349,7 +350,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="advantages-item">
               <div class="advantages-item-text">
                 <div class="advantages-item-small-text">круглосуточное</div>
@@ -360,7 +361,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="advantages-item">
               <div class="advantages-item-text">
                 <div class="advantages-item-small-text">кабельное</div>
@@ -371,7 +372,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="advantages-item">
               <div class="advantages-item-text">
                 <div class="advantages-item-small-text">быстрая</div>
@@ -382,7 +383,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="advantages-item">
               <div class="advantages-item-text">
                 <div class="advantages-item-small-text">уютная</div>
@@ -393,7 +394,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="advantages-item">
               <div class="advantages-item-text">
                 <div class="advantages-item-small-text">удобное</div>
@@ -404,7 +405,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6">
             <div class="advantages-item">
               <div class="advantages-item-text">
                 <div class="advantages-item-small-text">качественный</div>
@@ -420,13 +421,13 @@
     </div>
   </div>
 
-  <div class="near-section">
-    <div class="container">
+  <div class="near-section section">
+    <div class="container-fluid">
       <div class="section-title">Рядом с гостиницей</div>
       <div class="near">
         <div class="row">
           <div class="col-md-5">
-            <div class="big-item turgoyak">
+            <div class="item big-item turgoyak">
               <div class="big-item-content">
                 <div class="place-time">
                   <img class="place-time-image" src="images/near-clock-light-icon.svg" alt="">
@@ -435,8 +436,8 @@
                 <div class="place">
                   <div class="place-name">Тургояк</div>
                   <div class="place-icons">
-                    <img class="place-icon" src="images/near-swim-icon.svg" alt="">
-                    <img class="place-icon" src="images/near-beach-icon.svg" alt="">
+                    <img class="place-icon" src="images/near-swim-icon.png" alt="">
+                    <img class="place-icon" src="images/near-beach-icon.png" alt="">
                   </div>
                 </div>
               </div>
@@ -445,7 +446,7 @@
           <div class="col-md-7">
             <div class="row">
               <div class="col-6">
-                <div class="small-item centr-goroda">
+                <div class="item small-item centr-goroda">
                   <div class="small-item-content">
                     <div class="place-time">
                       <img class="place-time-image" src="images/near-clock-light-icon.svg" alt="">
@@ -454,16 +455,16 @@
                     <div class="place">
                       <div class="place-name">Центр города</div>
                       <div class="place-icons">
-                        <img class="place-icon" src="images/near-business-icon.svg" alt="">
-                        <img class="place-icon" src="images/near-elefant-icon.svg" alt="">
-                        <img class="place-icon" src="images/near-shopping-icon.svg" alt="">
+                        <img class="place-icon" src="images/near-business-icon.png" alt="">
+                        <img class="place-icon" src="images/near-elefant-icon.png" alt="">
+                        <img class="place-icon" src="images/near-shopping-icon.png" alt="">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-6">
-                <div class="small-item solnechnaya-dolina">
+                <div class="item small-item solnechnaya-dolina">
                   <div class="small-item-content">
                     <div class="place-time">
                       <img class="place-time-image" src="images/near-clock-light-icon.svg" alt="">
@@ -472,15 +473,15 @@
                     <div class="place">
                       <div class="place-name">Солнечная долина</div>
                       <div class="place-icons">
-                        <img class="place-icon" src="images/near-ski-icon.svg" alt="">
-                        <img class="place-icon" src="images/near-hiking-icon.svg" alt="">
+                        <img class="place-icon" src="images/near-ski-icon.png" alt="">
+                        <img class="place-icon" src="images/near-hiking-icon.png" alt="">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-6">
-                <div class="small-item kafe-i-restorany">
+                <div class="item small-item kafe-i-restorany">
                   <div class="small-item-content">
                     <div class="place-time">
                       <img class="place-time-image" src="images/near-clock-light-icon.svg" alt="">
@@ -489,16 +490,16 @@
                     <div class="place">
                       <div class="place-name">Кафе и рестораны</div>
                       <div class="place-icons">
-                        <img class="place-icon" src="images/near-cup-icon.svg" alt="">
-                        <img class="place-icon" src="images/near-forkknife-icon.svg" alt="">
-                        <img class="place-icon" src="images/near-glass-icon.svg" alt="">
+                        <img class="place-icon" src="images/near-cup-icon.png" alt="">
+                        <img class="place-icon" src="images/near-forkknife-icon.png" alt="">
+                        <img class="place-icon" src="images/near-glass-icon.png" alt="">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-6">
-                <div class="small-item zapovednik">
+                <div class="item small-item zapovednik">
                   <div class="small-item-content">
                     <div class="place-time">
                       <img class="place-time-image" src="images/near-clock-dark-icon.svg" alt="">
@@ -507,9 +508,9 @@
                     <div class="place">
                       <div class="place-name">Заповедник</div>
                       <div class="place-icons">
-                        <img class="place-icon" src="images/near-elk-icon.svg" alt="">
-                        <img class="place-icon" src="images/near-forest-icon.svg" alt="">
-                        <img class="place-icon" src="images/near-nature-icon.svg" alt="">
+                        <img class="place-icon" src="images/near-elk-icon.png" alt="">
+                        <img class="place-icon" src="images/near-forest-icon.png" alt="">
+                        <img class="place-icon" src="images/near-nature-icon.png" alt="">
                       </div>
                     </div>
                   </div>
@@ -524,13 +525,11 @@
     <div class="near-right-radius"></div>
   </div>
 
-  <div id="contacts" class="contacts-section">
-    <div class="container">
+  <div id="contacts" class="contacts-section section">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="section-title">Как нас найти</div>
-
-          
           <div class="contacts-item address">г. Миасс, улица Богдана Хмельницкого, 86</div>
           <div class="contacts-item phone">
             <a href="tel:+78002507505" class="phone-link">8 800 250 75 05</a>
@@ -552,7 +551,7 @@
             <button class="contacts-callback-btn callback-btn">Перезвоните мне</button>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="map">
             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A69b8b41741d857c4624316611ce81ae52849a18c06bc66516c29979fceb95197&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
           </div>
@@ -561,42 +560,42 @@
     </div>
   </div>
 
-  <div class="testimonials-section">
-    <div class="container">
+  <div class="testimonials-section section">
+    <div class="container-fluid">
       <div class="section-title">Отзывы</div>
-      <div class="testimonials">
+      <div class="testimonials hidden-mobile">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div class="testimonials-item">
               <div class="testimonials-item-name">Ася Сиянова</div>
               <div class="testimonials-item-text">Достаточно удобное расположение, красивый просторный и хорошо обставленный номер. На этаже кухонная зона, где нельзя готовить, но можно разогреть еду и комфортно расположиться за столом. Близость к оживленной дороге не мешала, транспорт слышно не было.. в отличие от того, что происходит на этаже, к сожалению. Утром были разбужены грохотом уборки соседних номеров, вечером слышали всех соседей. Но в целом мы остались довольны.</div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div class="testimonials-item">
               <div class="testimonials-item-name">Дарья Мальцева</div>
               <div class="testimonials-item-text">Были проездом, хорошая работа персонала и чистый номер, рекомендую.</div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div class="testimonials-item">
               <div class="testimonials-item-name">Алексей К</div>
               <div class="testimonials-item-text">Останавливались с семьёй в данной гостинице. Очень понравилось! Чисто, уютно, вежливый персонал! На этаже есть кухня, на которой можно самостоятельно приготовить. Стоянка с видеонаблюдением! В номере есть холодильник, телевизор, фен, тапочки и средства гигиены. Громадная душевая!) Рекомендую!!!!</div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div class="testimonials-item">
               <div class="testimonials-item-name">Анна Милешкина</div>
               <div class="testimonials-item-text">Выбрали отель поближе к Тургояку и не пожалели! В номере чисто, уютно, комфортно, тихо! Всё необходимое прямо в номере! Правда очень не хватало передвижного столика, но это ничуть не испортило впечатление об отдыхе)</div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div class="testimonials-item">
               <div class="testimonials-item-name">Svetlana A</div>
               <div class="testimonials-item-text">Уютный,небольшой отель. Чисто и опрятно. Номера уютные. Есть душ и туалет в номере. На этаже имеется кухня,есть микроволновая печь,чайник,посуда,вода. Всё необходимое!</div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div class="testimonials-item last-testimonials-item">
               <div class="testimonials-item-name">все отзыв на 2ГИС</div>
               <div class="testimonials-item-logo">
@@ -608,10 +607,34 @@
         </div>
       </div>
     </div>
+    <div class="testimonials-slider swiper hidden-desktop">
+      <div class="swiper-wrapper">
+        <div class="testimonials-item swiper-slide">
+          <div class="testimonials-item-name">Ася Сиянова</div>
+          <div class="testimonials-item-text">Достаточно удобное расположение, красивый просторный и хорошо обставленный номер. На этаже кухонная зона, где нельзя готовить, но можно разогреть еду и комфортно расположиться за столом. Близость к оживленной дороге не мешала, транспорт слышно не было.. в отличие от того, что происходит на этаже, к сожалению. Утром были разбужены грохотом уборки соседних номеров, вечером слышали всех соседей. Но в целом мы остались довольны.</div>
+        </div>
+        <div class="testimonials-item swiper-slide">
+          <div class="testimonials-item-name">Дарья Мальцева</div>
+          <div class="testimonials-item-text">Были проездом, хорошая работа персонала и чистый номер, рекомендую.</div>
+        </div>
+        <div class="testimonials-item swiper-slide">
+          <div class="testimonials-item-name">Алексей К</div>
+          <div class="testimonials-item-text">Останавливались с семьёй в данной гостинице. Очень понравилось! Чисто, уютно, вежливый персонал! На этаже есть кухня, на которой можно самостоятельно приготовить. Стоянка с видеонаблюдением! В номере есть холодильник, телевизор, фен, тапочки и средства гигиены. Громадная душевая!) Рекомендую!!!!</div>
+        </div>
+        <div class="testimonials-item swiper-slide">
+          <div class="testimonials-item-name">Анна Милешкина</div>
+          <div class="testimonials-item-text">Выбрали отель поближе к Тургояку и не пожалели! В номере чисто, уютно, комфортно, тихо! Всё необходимое прямо в номере! Правда очень не хватало передвижного столика, но это ничуть не испортило впечатление об отдыхе)</div>
+        </div>
+        <div class="testimonials-item swiper-slide">
+          <div class="testimonials-item-name">Svetlana A</div>
+          <div class="testimonials-item-text">Уютный,небольшой отель. Чисто и опрятно. Номера уютные. Есть душ и туалет в номере. На этаже имеется кухня,есть микроволновая печь,чайник,посуда,вода. Всё необходимое!</div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <footer class="footer">
-    <div class="container">
+  <footer class="footer section">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-6">
           <div class="footer-address footer-title">г. Миасс, улица Богдана Хмельницкого 86</div>
@@ -685,146 +708,6 @@
     </div>
   </footer>
 
-<!-- 
-  <div class="fake-block"></div>
-
-  <header class="header">
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-10 ms-auto">
-          <div class="horizontal-line-wrapper">
-            <div class="horizontal-line"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-2">
-          <div class="logo">
-            <img src="images/header-logo.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="header-address">г. Миасс, улица Богдана Хмельницкого 86</div>
-          <div class="top-menu">
-            <div class="menu">
-              <ul class="menu">
-                <li class="menu-item">
-                  <a href="#about">О гостинице</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#rooms">Номера</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#contacts">Контакты</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="header-contacts">
-            <div class="header-phone">
-              <span class="header-phone__text">Номер для брони:&nbsp;</span>
-              <a href="tel:+79617964972" class="header-phone__link">7 (961) 796 49 72</a>
-          </div>
-            <div class="header-social-icons">
-              <a href="#" class="social-icon__link">
-                <img src="images/viber-icon.png" class="social-icon__image" alt="">
-              </a>
-              <a href="#" class="social-icon__link">
-                <img src="images/whatsapp-icon.png" class="social-icon__image" alt="">
-              </a>
-            </div>
-          </div>
-          <button class="header-callback-btn">Перезвоните мне</button>
-        </div>
-      </div>
-    </div>
-    
-  </header>
-
-  <div class="fake-block"></div>
- -->
-  
-<!-- 
-  <div class="main">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-
-  <div id="how-we-work" class="how-we-work"></div>
-
-  <div id="products" class="products section">
-    <div class="input-container">
-      <input id="header-in-select" name="in-select" class="select in-select" placeholder="Заезд" readonly="readonly">
-      <label for="header-in-select" class="input-arrow"></label>
-    </div>
-  </div>
- -->
-<!-- 
-  <div id="about" class="about section">
-    <div class="pswp-gallery pswp-gallery--single-column my-gallery" id="gallery--getting-started">
-      
-      <p>cropped thumbnail</p>
-      <div class="gallery-item croped">
-        <a  href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg" 
-        data-pswp-width="1875" 
-        data-pswp-height="2500" 
-        data-cropped="true" 
-        target="_blank">
-        <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg" alt="" />
-      </a>
-      </div>
-      
-      <a class="hidden" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" 
-        data-pswp-width="1669" 
-        data-pswp-height="2500" 
-        target="_blank">
-        <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="" />
-      </a>
-
-      <p>data-pswp-src with custom URL in href</p>
-      <a class="hidden" href="https://unsplash.com" 
-        data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
-        data-pswp-width="2500" 
-        data-pswp-height="1666" 
-        target="_blank">
-        <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="" />
-      </a>
-
-      <p>Without thumbnail</p>
-      <a class="hidden" href="http://example.com" 
-        data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg"
-        data-pswp-width="2500" 
-        data-pswp-height="1668" 
-        target="_blank">
-        No thumbnail
-      </a>
-
-    </div>
-  </div>
-
-  <div id="chess" class="chess section"></div>
- -->
-
   <!-- mobile menu -->
   <div class="burger-menu-wrapper hidden-desktop">
     <div class="burger-menu">
@@ -832,20 +715,38 @@
     </div>
   </div>
   <div class="mobile-menu hidden-desktop">
+    <div class="logo">
+      <img src="images/mobile-dark-logo.png" alt="">
+    </div>
+    <div class="address">г. Миасс, улица Богдана Хмельницкого 86</div>
     <ul class="menu">
       <li class="menu-item">
-        <a href="#about">О проекте</a>
+        <a href="#about">О гостинице</a>
       </li>
       <li class="menu-item">
-        <a href="#how-we-work">Как мы работаем</a>
+        <a href="#rooms">Номера</a>
       </li>
       <li class="menu-item">
-        <a href="#products">Продукты</a>
-      </li>
-      <li class="menu-item">
-        <a href="#chess">Что вы получите?</a>
+        <a href="#contacts">Контакты</a>
       </li>
     </ul>
+    <div class="phone">
+      <a href="tel:+78002507505" class="phone-link">8 800 250 75 05</a>
+      <span class="phone-text"> — бронирование</span>
+    </div>
+    <div class="phone last-contacts-item">
+      <a href="tel:+79617964972" class="phone-link">+7 (961) 796 49 72</a>
+      <span class="phone-text"> — администратор</span>
+    </div>
+    <div class="social-icons">
+      <a href="viber://chat?number=%2B79617964972" class="social-icon-link" target="_blank">
+        <img src="images/viber-icon.png" class="social-icon-image" alt="">
+      </a>
+      <a href="https://wa.me/79617964972" class="social-icon-link" target="_blank">
+        <img src="images/whatsapp-icon.png" class="social-icon-image" alt="">
+      </a>
+    </div>
+    <button class="mobile-menu-callback-btn callback-btn">Перезвоните мне</button>
   </div>
   
   <!-- feedback-modal -->

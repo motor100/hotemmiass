@@ -33,14 +33,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // About swiper slider
-  const swiper = new Swiper(".about-slider", {
+  const aboutSlider = new Swiper('.about-slider', {
     slidesPerView: 1,
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   });
+
+  // Testimonials swiper slider
+  const testimonialsSlider = new Swiper('.testimonials-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+  });
+
+  
 
   // Photoswipe
 
@@ -59,7 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   burgerMenuWrapper.onclick = function () {
     body.classList.toggle('overflow-hidden');
-    mobileMenu.classList.toggle('down');
+    burgerMenuWrapper.classList.toggle('active');
+    mobileMenu.classList.toggle('mobile-menu-open');
     burgerMenu.classList.toggle('close');
   }
 
@@ -72,7 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeMenu (event) {
     event.preventDefault();
     body.classList.remove('overflow-hidden');
-    mobileMenu.classList.remove('down');
+    burgerMenuWrapper.classList.remove('active');
+    mobileMenu.classList.remove('mobile-menu-open');
     burgerMenu.classList.remove('close');
     let hrefClick = this.href;
     setTimeout(function() {location.href = hrefClick}, 700);

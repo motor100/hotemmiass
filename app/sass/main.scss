@@ -110,6 +110,9 @@ ul {
 .air-datepicker-cell.-selected-.-focus- {
   background: #564644;
 }
+.pswp__img {
+  object-fit: contain;
+}
 
 // header
 .header {
@@ -137,8 +140,11 @@ ul {
   background-color: #D9D9D9;
 }
 .header .header-address {
-  margin: 0 0 45px 0;
+  margin: 0 0 35px 0;
   color: #fff;
+}
+.header .header-address .short-street {
+  display: none;
 }
 .header .header-contacts {
   display: flex;
@@ -172,20 +178,23 @@ ul {
   text-transform: uppercase;
 }
 .header .top-menu {
+  display: flex;
   font-size: 0;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .header .top-menu .menu-item {
   display: inline-block;
-  margin: 0 4%;
+  margin: 0 8% 10px 0;
   border-bottom: 1px solid transparent;
   transition: border-bottom .3s;
 }
-.header .top-menu .menu-item:first-child {
-  margin: 0 4% 0 0;
-}
-.header .top-menu .menu-item:last-child {
-  margin: 0 0 0 4%;
-}
+// .header .top-menu .menu-item:first-child {
+//   margin: 0 4% 0 0;
+// }
+// .header .top-menu .menu-item:last-child {
+//   margin: 0 0 0 4%;
+// }
 .header .top-menu .menu-item a {
   font-size: 20px;
   color: #fff;
@@ -195,7 +204,6 @@ ul {
 .header .top-menu .menu-item:hover {
   border-bottom: 1px solid #fff;
 }
-
 
 // main section
 .main-section {
@@ -213,15 +221,21 @@ ul {
 .main-section .logo img {
   width: 100%;
 }
-.main-section .order {
+.main-section .order-wrapper {
   position: absolute;
   bottom: -50px;
   left: 0;
   right: 0;
-  width: 600px;
+  width: 100%;
+  max-width: 624px;
   height: 150px;
   margin: 0 auto;
-  padding: 32px 25px;
+  padding: 0 12px;
+}
+.main-section .order {
+  width: 100%;
+  height: 150px;
+  padding: 32px 24px;
   border-radius: 30px;
   background-color: #fff;
   box-shadow: 0px 69px 28px rgba(156, 156, 156, 0.01), 0px 39px 23px rgba(156, 156, 156, 0.03), 0px 17px 17px rgba(156, 156, 156, 0.04), 0px 4px 10px rgba(156, 156, 156, 0.05), 0px 0px 0px rgba(156, 156, 156, 0.05);
@@ -281,10 +295,18 @@ ul {
   appearance: none;
   margin: 0;
 }
+.main-section .order-btn-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1400px;
+  margin: 0 auto;
+}
 .main-section .main-radius {
   position: absolute;
   bottom: 0;
-  right: 50px;
+  right: 0;
   background: url(../images/main-radius.png) center no-repeat;
   background-size: contain;
   width: 400px;
@@ -293,7 +315,7 @@ ul {
 .main-section .order-btn {
   position: absolute;
   bottom: -95px;
-  right: 135px;
+  right: 85px;
   width: 230px;
   height: 230px;
   padding: 88px 61px 88px 20px;
@@ -305,7 +327,6 @@ ul {
 .main-section .order-btn-text {
   font-family: 'jost-light';
   font-size: 18px;
-  text-align: right;
   text-transform: uppercase;
 }
 .main-section .order-btn-arrow {
@@ -334,7 +355,6 @@ ul {
   top: 3px;
   transform: rotate(-45deg);
 }
-
 
 // rooms
 .rooms-section .rooms-item {
@@ -405,7 +425,6 @@ ul {
   max-height: 0;
   overflow: hidden;
   transition: max-height .3s;
-  // max-height: 300px;
 }
 .rooms-section .active .rooms-item-decription {
   max-height: 300px;
@@ -416,7 +435,6 @@ ul {
 .rooms-section .active .rooms-item-arrow::after {
   transform: rotate(45deg);
 }
-
 .rooms-section .rooms-item-gallery {
   position: relative;
   height: 0;
@@ -432,10 +450,6 @@ ul {
   height: 100%;
   object-fit: cover;
 }
-.pswp__img {
-  object-fit: contain;
-}
-
 
 // about section
 .about-section {
@@ -453,11 +467,11 @@ ul {
 .about-section .about-radius {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -42px;
   background: url(../images/about-radius.png) top no-repeat;
   background-size: contain;
   height: 160px;
-  width: 52%;
+  width: 658px;
 }
 .about-section .about-section-content {
   font-size: 22px;
@@ -1184,6 +1198,38 @@ ul {
 }
 
 @media only screen and (max-width : 1400px) {
+  .main-section .order-btn-container {
+    bottom: -170px;
+    width: 400px;
+    height: 75px;
+  }
+  .main-section .order-btn {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    max-width: 374px;
+    height: 75px;
+    margin: 0 auto;
+    padding: 18px 0;
+    border: 1px solid #211f1f;
+    border-radius: 30px;
+    background-color: transparent;
+    text-align: center;
+  }
+  .main-section .order-btn .order-btn-text {
+    font-size: 26px;
+    text-transform: uppercase;
+  }
+  .main-section .order-btn .order-btn-text br {
+    display: none;
+  }
+  .main-section .main-radius {
+    display: none;
+  }
+  .main-section .order-btn-arrow {
+    display: none;
+  }
   .rooms-section .rooms-item-title {
     font-size: 19px;
   }
@@ -1211,27 +1257,29 @@ ul {
   .testimonials-section .testimonials-item {
     min-height: 460px;
   }
-  
 }
 
 @media only screen and (max-width : 992px) {
   .container-fluid {
     --bs-gutter-x: 24px;
   }
-  .header {
-    .menu .menu-item a {
-      font-size: 13px;
-    }
-    .btn {
-      padding: 0 19px;
-      font-size: 13px;
-    }
+  .header .header-contacts .header-phone .header-phone-text {
+    display: none;
   }
-  .main {
-    .title {
-      padding: 200px 0 10px 0;
-    }
+  .header .header-address .street {
+    display: none;
   }
+  .header .header-address .short-street {
+    display: inline;
+  }
+  // .header .top-menu .menu-item {
+  //   margin: 0 15px 10px 0;
+  // }
+  // .main {
+  //   .title {
+  //     padding: 200px 0 10px 0;
+  //   }
+  // }
   .testimonials-section .testimonials-item {
     min-height: 380px;
   }
@@ -1271,6 +1319,9 @@ ul {
     padding: 45px 0 0 0;
     z-index: 1;
   }
+  .about-section .about-section-content {
+    font-size: 19px;
+  }
   .contacts-section .contacts-item {
     font-size: 18px;
   }
@@ -1299,14 +1350,47 @@ ul {
   .testimonials-section .testimonials-item-text {
     height: 405px;
   }
-
-
-  
 }
 
 @media only screen and (max-width : 480px) {
   .section-title {
     font-size: 30px;
+  }
+  .main-section {
+    margin: 0 0 100px 0;
+  }
+  .main-section .order-wrapper {
+    bottom: 25px;
+    height: auto;
+  }
+  .main-section .order {
+    height: auto;
+    padding: 24px;
+  }
+  .main-section .order-title {
+    font-size: 22px;
+  }
+  .main-section .form-group {
+    display: block;
+  }
+  .main-section .form-group .input-wrapper {
+    width: 248px;
+    margin: 15px auto;
+  }
+  .main-section .order-btn-container {
+    bottom: -100px;
+    width: 100%;
+  }
+  .main-section .order-btn {
+    height: 65px;
+    width: 300px;
+    max-width: none;
+  }
+  .main-section .order-btn .order-btn-text {
+    font-size: 22px;
+  }
+  .about-section .about-section-content {
+    font-size: 16px;
   }
   .contacts-section .contacts-item {
     font-size: 16px;

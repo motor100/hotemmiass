@@ -34,7 +34,7 @@
             </div>
           </div>
           <div class="col-md-5">
-            <div class="header-address">г. Миасс, улица Богдана Хмельницкого 86</div>
+            <div class="header-address">г. Миасс, <span class="street"> улица</span><span class="short-street"> ул.</span> Богдана Хмельницкого 86</div>
             <ul class="top-menu">
               <li class="menu-item">
                 <a href="#about">О гостинице</a>
@@ -76,22 +76,29 @@
         <img src="images/main-logo.png" alt="">
       </div>
     </div>
-    <div class="order">
-      <div class="order-title">Бронирование номеров</div>
-      <div class="form-group">
-        <div class="input-wrapper start-date">
-          <input type="text" id="start-date" name="start-date" class="input input-start-date" placeholder="Заезд" required>
-        </div>
-        <div class="input-wrapper guest">
-          <input type="number" name="guest" class="input input-guest" min="1" max="10" placeholder="Гостей" required>
+
+    <div class="order-wrapper">
+      <div class="order">
+        <div class="order-title">Бронирование номеров</div>
+        <div class="form-group">
+          <div class="input-wrapper start-date">
+            <input type="text" id="start-date" name="start-date" class="input input-start-date" placeholder="Заезд" required>
+          </div>
+          <div class="input-wrapper guest">
+            <input type="number" name="guest" class="input input-guest" min="1" max="10" placeholder="Гостей" required>
+          </div>
         </div>
       </div>
     </div>
-    <div class="main-radius"></div>
-    <div class="order-btn">
-      <span class="order-btn-text">Забронировать<br>номер</span>
-      <div class="order-btn-arrow"></div>
+
+    <div class="order-btn-container">
+      <div class="main-radius"></div>
+      <div class="order-btn">
+        <span class="order-btn-text">Забронировать <br>номер</span>
+        <div class="order-btn-arrow"></div>
+      </div>
     </div>
+
     <div class="background-blur hidden-desktop"></div>
   </div>
 

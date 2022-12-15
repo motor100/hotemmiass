@@ -17,6 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     autoClose: true,
   });
 
+  // Digits only
+  let inputDigitsOnly = document.querySelector('#guest');
+  inputDigitsOnly.oninput = function() {
+    this.value = this.value.replace(/[^1-9\.]/g, '');
+  }
+
 
   // room description
   let roomsItemContent = document.querySelectorAll('.rooms-item-content');

@@ -285,16 +285,16 @@ ul {
 .main-section .form-group .guest::before {
   background: url(../images/guest-icon.svg) center no-repeat;
 }
-.main-section .form-group .input-guest {
-  -moz-appearance: textfield;
-}
-.main-section .form-group .input-guest::-webkit-inner-spin-button,
-.main-section .form-group .input-guest::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin: 0;
-}
+// .main-section .form-group .input-guest {
+//   -moz-appearance: textfield;
+// }
+// .main-section .form-group .input-guest::-webkit-inner-spin-button,
+// .main-section .form-group .input-guest::-webkit-outer-spin-button {
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
+//   margin: 0;
+// }
 .main-section .order-btn-container {
   position: absolute;
   left: 0;
@@ -482,10 +482,10 @@ ul {
   margin-bottom: .8rem;
   font-family: 'jost-medium';
 }
-.about-section .about-list {
-  margin: 0 0 64px 0;
+.about-section .about-for-you-list {
+  margin: 0 0 100px 0;
 }
-.about-section .about-list .about-list-item {
+.about-section .about-for-you-list .about-list-item {
   margin: 0;
 }
 .about-section .about-list-item {
@@ -515,9 +515,9 @@ ul {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 525px;
   height: 244px;
-  padding: 20px 60px;
+  padding: 20px 80px;
   background: url(../images/about-rectangle.png) center no-repeat;
   background-size: contain;
 }
@@ -551,36 +551,63 @@ ul {
 // advantages-section
 .advantages-section .advantages-item {
   display: flex;
-  color: #fff;
-  justify-content: space-between;
-}
-.advantages-section .advantages-item {
   margin: 0 0 50px 0;
-  // padding: 10%;
-  padding: 8%;
+  padding: 7%;
   border-radius: 30px;
   background-color: #211F1F;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
 }
 .advantages-section .advantages-item-small-text {
   font-family: 'jost-light';
-  // font-size: 20px;
   font-size: 18px;
   font-style: italic;
 }
 .advantages-section .advantages-item-big-text {
   font-family: 'jost-medium';
-  // font-size: 24px;
-  font-size: 20px;
+  font-size: 19px;
   text-transform: uppercase;
 }
 .advantages-section .advantages-item-icon {
   width: 50px;
   height: 50px;
+  flex-shrink: 0;
 }
 .advantages-section .advantages-item-icon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.advantages-section .advantages-mobile .advantages-row {
+  display: flex;
+  justify-content: space-between;
+}
+.advantages-section .advantages-mobile .padding-both {
+  padding: 0 12px;
+}
+.advantages-section .advantages-mobile .padding-left {
+  padding: 0 0 0 12px;
+}
+.advantages-section .advantages-mobile .padding-right {
+  padding: 0 12px 0 0;
+}
+.advantages-section .advantages-mobile .advantages-left-item {
+  height: 80px;
+  width: 26%;
+  border-radius: 20px 0 0 20px;
+}
+.advantages-section .advantages-mobile .advantages-right-item {
+  height: 80px;
+  width: 26%;
+  border-radius: 0 20px 20px 0;
+}
+.advantages-section .advantages-mobile .bgc-green {
+  background-color: #0EB550;
+}
+.advantages-section .advantages-mobile .bgc-blue {
+  background-color: #0195D6;
 }
 
 // near-section
@@ -618,6 +645,7 @@ ul {
 .near-section .place {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .near-section .big-item-content .place-name {
   font-family: 'jost-medium';
@@ -1198,6 +1226,9 @@ ul {
 }
 
 @media only screen and (max-width : 1400px) {
+  .section-title {
+    font-size: 58px;
+  }
   .main-section .order-btn-container {
     bottom: -170px;
     width: 400px;
@@ -1233,6 +1264,27 @@ ul {
   .rooms-section .rooms-item-title {
     font-size: 19px;
   }
+  .about-section .about-section-content {
+    font-size: 21px;
+  }
+  .about-section .about-for-you-list {
+    margin: 0 0 64px 0;
+  }
+  .about-section .about-rectangle {
+    width: 425px;
+    height: 215px;
+    padding: 20px 55px;
+  }
+  .advantages-section .advantages-item {
+    padding: 6%;
+  }
+  .advantages-section .advantages-item-big-text {
+    font-size: 17px;
+  }
+  .advantages-section .advantages-item-icon {
+    width: 40px;
+    height: 40px;
+  }
   .near-section .turgoyak {
     height: 600px;
   }
@@ -1251,8 +1303,44 @@ ul {
 }
 
 @media only screen and (max-width : 1200px) {
+  .section-title {
+    font-size: 54px;
+  }
   .header .top-menu .menu-item a {
     font-size: 18px;
+  }
+  .about-section .about-section-content {
+    font-size: 19px;
+  }
+  .about-section .about-rectangle {
+    width: 355px;
+    height: 181px;
+    padding: 20px 50px;
+  }
+  .advantages-section .advantages-item {
+    margin: 0 0 32px 0;
+  }
+  .advantages-section .advantages-item-big-text {
+    font-size: 13px;
+  }
+  .advantages-section .advantages-item-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .near-section .item {
+    border-radius: 20px;
+  }
+  .near-section .big-item-content {
+    border-radius: 20px;
+  }
+  .near-section .small-item-content {
+    border-radius: 20px;
+  }
+  .near-section .big-item-content .place-name {
+    font-size: 28px;
+  }
+  .near-section .small-item-content .place-name {
+    font-size: 14px;
   }
   .testimonials-section .testimonials-item {
     min-height: 460px;
@@ -1263,6 +1351,13 @@ ul {
   .container-fluid {
     --bs-gutter-x: 24px;
   }
+  .section {
+    padding: 50px 0;
+  }
+  .section-title {
+    margin: 0 0 50px 0;
+    font-size: 48px;
+  }
   .header .header-contacts .header-phone .header-phone-text {
     display: none;
   }
@@ -1272,6 +1367,16 @@ ul {
   .header .header-address .short-street {
     display: inline;
   }
+  .about-section .about-section-content {
+    font-size: 17px;
+  }
+  .about-section .about-list-image {
+    width: 30px;
+    height: 30px;
+  }
+  .about-section .about-rectangle {
+    display: none;
+  }
   // .header .top-menu .menu-item {
   //   margin: 0 15px 10px 0;
   // }
@@ -1280,6 +1385,21 @@ ul {
   //     padding: 200px 0 10px 0;
   //   }
   // }
+  .advantages-section .advantages-item-big-text {
+    font-size: 17px;
+  }
+  .near-section .small-item-content {
+    padding: 4%;
+  }
+  .near-section .small-item-content .place-time-image {
+    margin: 0 4px 0 0;
+  }
+  .near-section .small-item-content .place-name {
+    font-size: 12px;
+  }
+  .near-section .small-item-content .last-place-icon {
+    display: none;
+  }
   .testimonials-section .testimonials-item {
     min-height: 380px;
   }
@@ -1303,6 +1423,7 @@ ul {
   }
   .section-title {
     margin: 0 0 16px 0;
+    font-size: 45px;
     text-align: center;
   }
   .background-blur {
@@ -1321,6 +1442,34 @@ ul {
   }
   .about-section .about-section-content {
     font-size: 19px;
+  }
+  .about-section .about-for-you-list {
+    margin: 0 0 20px 0;
+  }
+  .about-section .about-free-services-list {
+    margin: 0 0 40px 0;
+  }
+  .about-section .about-rectangle {
+    position: static;
+    display: block;
+  }
+  .advantages-section .advantages-item {
+    height: 80px;
+    padding: 16px;
+    margin: 0 0 20px 0;
+    border-radius: 20px;
+  }
+  .advantages-section .padding-both .advantages-item {
+    width: 48%;
+  }
+  .advantages-section .padding-one-side .advantages-item {
+    width: 70%;
+  }
+  .near-section .big-item {
+    margin: 0 0 15px 0;
+  }
+  .near-section .small-item {
+    margin: 0 0 15px 0;
   }
   .contacts-section .contacts-item {
     font-size: 18px;
@@ -1353,6 +1502,9 @@ ul {
 }
 
 @media only screen and (max-width : 480px) {
+  .section {
+    padding: 40px 0;
+  }
   .section-title {
     font-size: 30px;
   }
@@ -1389,8 +1541,38 @@ ul {
   .main-section .order-btn .order-btn-text {
     font-size: 22px;
   }
+  .about-section .about-rectangle {
+    width: 320px;
+    height: 163px;
+    padding: 15px 40px;
+    margin: 0 -12px;
+  }
   .about-section .about-section-content {
     font-size: 16px;
+  }
+  .advantages-section .advantages-item {
+    padding: 12px;
+  }
+  .advantages-section .advantages-item-small-text {
+    font-size: 15px;
+  }
+  .advantages-section .advantages-item-big-text {
+    font-size: 12px;
+  }
+  .near-section .big-item {
+    height: 285px;
+  }
+  .near-section .big-item-content .place-text {
+    font-size: 16px;
+  }
+  .near-section .big-item-content .place-name {
+    font-size: 15px;
+  }
+  .near-section .small-item-content .place-name {
+    font-size: 15px;
+  }
+  .near-section .big-item-content .place-icon {
+    width: 30px;
   }
   .contacts-section .contacts-item {
     font-size: 16px;

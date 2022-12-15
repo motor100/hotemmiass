@@ -85,7 +85,7 @@
             <input type="text" id="start-date" name="start-date" class="input input-start-date" placeholder="Заезд" required>
           </div>
           <div class="input-wrapper guest">
-            <input type="number" name="guest" class="input input-guest" min="1" max="10" placeholder="Гостей" required>
+            <input type="text" id="guest" name="guest" class="input input-guest" maxlength="2" placeholder="Гостей" required>
           </div>
         </div>
       </div>
@@ -247,7 +247,7 @@
             <p>Бронирование номеров осуществляется бесплатно, а заселение производится круглосуточно.</p>
             <!-- <p>Забота и удобство по приемлемым ценам – это наш лозунг.</p> -->
             <div class="list-title">Для вас:</div>
-            <div class="about-list">
+            <div class="about-for-you-list">
               <div class="about-list-item">
                 <div class="about-list-item-dot"></div>
                 <div class="about-list-item-text">доступная стоимость проживания</div>
@@ -282,23 +282,25 @@
           <div class="col-md-5 position-relative">
             <p>Нашим гостям мы готовы предоставить новый номерной фонд из 6 номеров.</p>
             <div class="list-title">В числе бесплатных услуг:</div>
-            <div class="about-list-item">
-              <div class="about-list-image">
-                <img src="images/about-wifi-icon.png" alt="">
+            <div class="about-free-services-list">
+              <div class="about-list-item">
+                <div class="about-list-image">
+                  <img src="images/about-wifi-icon.png" alt="">
+                </div>
+                <div class="about-list-item-text">доступ в Интернет через Wi-Fi</div>
               </div>
-              <div class="about-list-item-text">доступ в Интернет через Wi-Fi</div>
-            </div>
-            <div class="about-list-item">
-              <div class="about-list-image">
-                <img src="images/about-tv-icon.png" alt="">
+              <div class="about-list-item">
+                <div class="about-list-image">
+                  <img src="images/about-tv-icon.png" alt="">
+                </div>
+                <div class="about-list-item-text">кабельное телевидение</div>
               </div>
-              <div class="about-list-item-text">кабельное телевидение</div>
-            </div>
-            <div class="about-list-item">
-              <div class="about-list-image">
-                <img src="images/about-packages-icon.png" alt="">
+              <div class="about-list-item">
+                <div class="about-list-image">
+                  <img src="images/about-packages-icon.png" alt="">
+                </div>
+                <div class="about-list-item-text">заказ такси, еды и напитков</div>
               </div>
-              <div class="about-list-item-text">заказ такси, еды и напитков</div>
             </div>
             <div class="about-rectangle">
               <div class="about-slider swiper">
@@ -333,7 +335,7 @@
   <div class="advantages-section section">
     <div class="container-fluid">
       <div class="section-title">Преимущества</div>
-      <div class="advantages">
+      <div class="advantages hidden-mobile">
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="advantages-item">
@@ -426,6 +428,96 @@
         </div>
       </div>
     </div>
+    <div class="advantages-mobile hidden-desktop">
+      <div class="advantages-row padding-both">
+        <div class="advantages-item">
+          <div class="advantages-item-text">
+            <div class="advantages-item-small-text">бесплатный</div>
+            <div class="advantages-item-big-text">WI-FI</div>
+          </div>
+          <div class="advantages-item-icon">
+            <img src="images/advantages-wifi-icon.svg" alt="">
+          </div>
+        </div>
+        <div class="advantages-item">
+          <div class="advantages-item-text">
+            <div class="advantages-item-small-text">большая</div>
+            <div class="advantages-item-big-text">Автопарковка</div>
+          </div>
+          <div class="advantages-item-icon">
+            <img src="images/advantages-parking-icon.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="advantages-row padding-one-side padding-left">
+        <div class="advantages-item">
+          <div class="advantages-item-text">
+            <div class="advantages-item-small-text">круглосуточное</div>
+            <div class="advantages-item-big-text">Видеонаблюдение</div>
+          </div>
+          <div class="advantages-item-icon">
+            <img src="images/advantages-video-icon.svg" alt="">
+          </div>
+        </div>
+        <div class="advantages-left-item bgc-green"></div>
+      </div>
+      <div class="advantages-row padding-one-side padding-right">
+        <div class="advantages-right-item bgc-blue"></div>
+        <div class="advantages-item">
+          <div class="advantages-item-text">
+            <div class="advantages-item-small-text">кабельное</div>
+            <div class="advantages-item-big-text">Телевидение</div>
+          </div>
+          <div class="advantages-item-icon">
+            <img src="images/advantages-tv-icon.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="advantages-row padding-both">
+        <div class="advantages-item">
+          <div class="advantages-item-text">
+            <div class="advantages-item-small-text">быстрая</div>
+            <div class="advantages-item-big-text">Прачечная</div>
+          </div>
+          <div class="advantages-item-icon">
+            <img src="images/advantages-washing-icon.svg" alt="">
+          </div>
+        </div>
+        <div class="advantages-item">
+          <div class="advantages-item-text">
+            <div class="advantages-item-small-text">уютная</div>
+            <div class="advantages-item-big-text">Кухня</div>
+          </div>
+          <div class="advantages-item-icon">
+            <img src="images/advantages-kitchen-icon.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="advantages-row padding-one-side padding-right">
+        <div class="advantages-right-item bgc-green"></div>
+        <div class="advantages-item">
+          <div class="advantages-item-text">
+            <div class="advantages-item-small-text">удобное</div>
+            <div class="advantages-item-big-text">Расположение</div>
+          </div>
+          <div class="advantages-item-icon">
+            <img src="images/advantages-compass-icon.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="advantages-row padding-one-side padding-left">
+        <div class="advantages-item">
+          <div class="advantages-item-text">
+            <div class="advantages-item-small-text">качественный</div>
+            <div class="advantages-item-big-text">Сервис</div>
+          </div>
+          <div class="advantages-item-icon">
+            <img src="images/advantages-service-icon.svg" alt="">
+          </div>
+        </div>
+        <div class="advantages-left-item bgc-blue"></div>
+      </div>
+    </div>
   </div>
 
   <div class="near-section section">
@@ -452,7 +544,7 @@
           </div>
           <div class="col-md-7">
             <div class="row">
-              <div class="col-6">
+              <div class="col-sm-6">
                 <div class="item small-item centr-goroda">
                   <div class="small-item-content">
                     <div class="place-time">
@@ -470,7 +562,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-6">
+              <div class="col-sm-6">
                 <div class="item small-item solnechnaya-dolina">
                   <div class="small-item-content">
                     <div class="place-time">
@@ -487,7 +579,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-6">
+              <div class="col-sm-6">
                 <div class="item small-item kafe-i-restorany">
                   <div class="small-item-content">
                     <div class="place-time">
@@ -499,13 +591,13 @@
                       <div class="place-icons">
                         <img class="place-icon" src="images/near-cup-icon.png" alt="">
                         <img class="place-icon" src="images/near-forkknife-icon.png" alt="">
-                        <img class="place-icon" src="images/near-glass-icon.png" alt="">
+                        <img class="place-icon last-place-icon" src="images/near-glass-icon.png" alt="">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-6">
+              <div class="col-sm-6">
                 <div class="item small-item zapovednik">
                   <div class="small-item-content">
                     <div class="place-time">

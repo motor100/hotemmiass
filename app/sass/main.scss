@@ -300,7 +300,8 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 1400px;
+  // width: 1400px;
+  max-width: 1270px;
   margin: 0 auto;
 }
 .main-section .main-radius {
@@ -309,16 +310,23 @@ ul {
   right: 0;
   background: url(../images/main-radius.png) center no-repeat;
   background-size: contain;
-  width: 400px;
-  height: 180px;
+  // width: 400px;
+  // height: 177px;
+  width: 328px;
+  height: 152px;
 }
 .main-section .order-btn {
   position: absolute;
-  bottom: -95px;
-  right: 85px;
-  width: 230px;
-  height: 230px;
-  padding: 88px 61px 88px 20px;
+  // bottom: -95px;
+  // right: 85px;
+  bottom: -75px;
+  right: 69px;
+  // width: 230px;
+  // height: 230px;
+  width: 190px;
+  height: 190px;
+  // padding: 88px 61px 88px 20px;
+  padding: 70px 49px 70px 10px;
   border: 1px solid #816347;
   border-radius: 50%;
   text-align: right;
@@ -326,14 +334,15 @@ ul {
 }
 .main-section .order-btn-text {
   font-family: 'jost-light';
-  font-size: 18px;
+  // font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
 }
 .main-section .order-btn-arrow {
   position: absolute;
-  bottom: 102px;
+  bottom: 85px;
   right: 14px;
-  width: 40px;
+  width: 30px;
   height: 1px;
   background-color: #816347;
 }
@@ -467,11 +476,12 @@ ul {
 .about-section .about-radius {
   position: absolute;
   top: 0;
-  left: -42px;
+  // left: -42px;
+  left: -64px;
   background: url(../images/about-radius.png) top no-repeat;
   background-size: contain;
-  height: 160px;
-  width: 658px;
+  height: 169px;
+  width: 703px;
 }
 .about-section .about-section-content {
   font-size: 22px;
@@ -824,7 +834,10 @@ ul {
   width: 20%;
   margin: 0 auto;
 }
-
+.footer .footer-right-content {
+  width: 361px;
+  margin: 0 0 0 auto;
+}
 .footer .footer-title {
   margin: 0 0 32px 0;
   font-size: 22px;
@@ -836,13 +849,14 @@ ul {
 }
 .footer .footer-documents-list-item {
   margin: 0 0 16px 0;
-  font-size: 22px;
+  font-size: 20px;
 }
 .footer .footer-documents-list-item a {
   color: #fff;
 }
 .footer .footer-menu .menu-item {
-  display: inline-block;
+  display: block;
+  width: max-content;
   margin: 0 0 16px 0;
   border-bottom: 1px solid transparent;
   transition: border-bottom .3s;
@@ -851,7 +865,7 @@ ul {
   border-bottom: 1px solid #fff;
 }
 .footer .footer-menu .menu-item a {
-  font-size: 22px;
+  font-size: 20px;
   color: #fff;
   line-height: 1.2;
   text-transform: uppercase;
@@ -886,11 +900,10 @@ ul {
 .footer .privacy-policy a {
   color: #fff;
 }
-.footer .developer {
-  display: flex;
-  justify-content: space-between;
-}
+.footer .city-year,
 .footer .developer a {
+  display: block;
+  margin: 0 0 10px 0;
   color: #fff;
 }
 
@@ -1229,40 +1242,14 @@ ul {
   .section-title {
     font-size: 58px;
   }
-  .main-section .order-btn-container {
-    bottom: -170px;
-    width: 400px;
-    height: 75px;
-  }
-  .main-section .order-btn {
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    max-width: 374px;
-    height: 75px;
-    margin: 0 auto;
-    padding: 18px 0;
-    border: 1px solid #211f1f;
-    border-radius: 30px;
-    background-color: transparent;
-    text-align: center;
-  }
-  .main-section .order-btn .order-btn-text {
-    font-size: 26px;
-    text-transform: uppercase;
-  }
-  .main-section .order-btn .order-btn-text br {
-    display: none;
-  }
-  .main-section .main-radius {
-    display: none;
-  }
-  .main-section .order-btn-arrow {
-    display: none;
+  .main-section .order-wrapper {
+    max-width: 584px;
   }
   .rooms-section .rooms-item-title {
     font-size: 19px;
+  }
+  .about-section .about-radius {
+    width: 674px;
   }
   .about-section .about-section-content {
     font-size: 21px;
@@ -1300,14 +1287,58 @@ ul {
   .testimonials-section .testimonials-item {
     min-height: 405px;
   }
+  .footer .footer-right-content {
+    width: auto;
+  }
+  .footer .footer-title {
+    font-size: 20px;
+  }
 }
 
 @media only screen and (max-width : 1200px) {
   .section-title {
     font-size: 54px;
   }
+  .callback-btn {
+    font-size: 23px;
+  }
   .header .top-menu .menu-item a {
     font-size: 18px;
+  }
+  .main-section .order-btn-container {
+    bottom: -170px;
+    width: 400px;
+    height: 75px;
+  }
+  .main-section .order-btn {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    max-width: 374px;
+    height: 75px;
+    margin: 0 auto;
+    padding: 18px 0;
+    border: 1px solid #211f1f;
+    border-radius: 30px;
+    background-color: transparent;
+    text-align: center;
+  }
+  .main-section .order-btn .order-btn-text {
+    font-size: 26px;
+    text-transform: uppercase;
+  }
+  .main-section .order-btn .order-btn-text br {
+    display: none;
+  }
+  .main-section .main-radius {
+    display: none;
+  }
+  .main-section .order-btn-arrow {
+    display: none;
+  }
+  .about-section .about-radius {
+    width: 644px;
   }
   .about-section .about-section-content {
     font-size: 19px;
@@ -1345,6 +1376,15 @@ ul {
   .testimonials-section .testimonials-item {
     min-height: 460px;
   }
+  .footer .footer-documents-list-item {
+    font-size: 18px;
+  }
+  .footer .footer-menu .menu-item a {
+    font-size: 18px;
+  }
+  .footer .footer-title {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width : 992px) {
@@ -1366,6 +1406,10 @@ ul {
   }
   .header .header-address .short-street {
     display: inline;
+  }
+  .about-section .about-radius {
+    left: -96px;
+    width: 579px;
   }
   .about-section .about-section-content {
     font-size: 17px;
@@ -1440,6 +1484,12 @@ ul {
     padding: 45px 0 0 0;
     z-index: 1;
   }
+  .about-section .about-radius {
+    left: 0;
+    width: 548px;
+    margin: 0 auto;
+    right: 0;
+  }
   .about-section .about-section-content {
     font-size: 19px;
   }
@@ -1499,6 +1549,15 @@ ul {
   .testimonials-section .testimonials-item-text {
     height: 405px;
   }
+  .footer .footer-logo {
+    width: 40%;
+  }
+  .footer .footer-subtitle {
+    margin: 0 0 8px 0;
+  }
+  .footer .footer-menu {
+    margin: 0 0 32px 0;
+  }
 }
 
 @media only screen and (max-width : 480px) {
@@ -1541,6 +1600,9 @@ ul {
   .main-section .order-btn .order-btn-text {
     font-size: 22px;
   }
+  .about-section .about-radius {
+    width: 380px;
+  }
   .about-section .about-rectangle {
     width: 320px;
     height: 163px;
@@ -1580,5 +1642,10 @@ ul {
   .modal-window .modal-area {
     padding: 50px 34px 50px 34px;
   }
-  
+  .footer {
+    padding: 60px 0 40px 0;
+  }
+  .footer .footer-logo {
+    width: 55%;
+  }
 }

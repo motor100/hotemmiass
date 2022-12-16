@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     this.value = this.value.replace(/[^1-9\.]/g, '');
   }
 
-
   // room description
   let roomsItemContent = document.querySelectorAll('.rooms-item-content');
 
@@ -32,11 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
       item.classList.toggle('active');
     }
   });
-
-  
-
-
-
 
   // About swiper slider
   const aboutSlider = new Swiper('.about-slider', {
@@ -54,18 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     spaceBetween: 20,
   });
 
-  
-
-  // Photoswipe
-
-  // const lightbox = new PhotoSwipeLightbox({
-  //   gallery: '.rooms-item-gallery',
-  //   children: 'a',
-  //   pswpModule: () => import('../../libs/photoswipe/dist/photoswipe.esm.js')
-  // });
-  // lightbox.init();
-  
-
   // Мобильное меню
   let burgerMenuWrapper = document.querySelector('.burger-menu-wrapper'),
       mobileMenu = document.querySelector('.mobile-menu'),
@@ -79,23 +61,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // закрытие меню при клике на parent элемент
-  // let listParentClick = document.querySelectorAll('.mobile-menu .menu-item a');
-  // for (let i = 0; i < listParentClick.length; i++) {
-  //   listParentClick[i].onclick = closeMenu;
-  // }
+  let listParentClick = document.querySelectorAll('.mobile-menu .menu-item a');
+  for (let i = 0; i < listParentClick.length; i++) {
+    listParentClick[i].onclick = function (event) {
+      event.preventDefault();
+      closeMenu ();
+      let hrefClick = this.href;
+      setTimeout(function() {location.href = hrefClick}, 700);
+    }
+  }
 
-  function closeMenu (event) {
-    event.preventDefault();
+  function closeMenu () {
     body.classList.remove('overflow-hidden');
     burgerMenuWrapper.classList.remove('active');
     mobileMenu.classList.remove('mobile-menu-open');
     burgerMenu.classList.remove('close');
-    let hrefClick = this.href;
-    setTimeout(function() {location.href = hrefClick}, 700);
   }
 
   // Окна
-  let callbackBtn = document.querySelectorAll('.callback-btn'),
+  let callbackBtn = document.querySelectorAll('.js-callback-btn'),
+      mobileMenuCallbackBtn = document.querySelector('.mobile-menu-callback-btn'),
       callbackModal = document.querySelector('#callback-modal'),
       modalWindow = document.querySelectorAll('.modal-window'),
       modalCloseBtn = document.querySelectorAll('.modal-window .modal-close');
@@ -105,6 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
     callbackBtn[i].onclick = function() {
       modalOpen(callbackModal);
     }
+  }
+
+  mobileMenuCallbackBtn.onclick = function() {
+    closeMenu();
+    modalOpen(callbackModal);
   }
 
   function modalOpen(win) {
@@ -137,6 +127,34 @@ document.addEventListener('DOMContentLoaded', () => {
     win.childNodes[1].classList.remove('active');
   }
 
+  // Order btn and insert hidden data
+  let orderBtn = document.querySelector('.order-btn');
+
+  orderBtn.onclick = orderBtnFn;
+  
+  function orderBtnFn() { 
+    let startDate = document.querySelector('#start-date'),
+        guest = document.querySelector('#guest');
+
+    if (startDate.value == "") {
+      startDate.classList.add('required');
+    } else {
+      startDate.classList.remove('required');
+    }
+    if (guest.value == "") {
+      guest.classList.add('required');
+    } else {
+      guest.classList.remove('required');
+    }
+    if (startDate.value != "" && guest.value != "") {
+      document.querySelector('#modal-start-date').value = startDate.value;
+      document.querySelector('#modal-guest').value = guest.value;
+      document.querySelector('#start-date').value = '';
+      document.querySelector('#guest').value = '';
+      modalOpen(callbackModal);
+    }
+  }
+
   // Отправка формы ajax
   let callbackModalForm = document.querySelector("#callback-modal-form"),
       callbackModalFormBtn = document.querySelector('.js-callback-modal-btn');
@@ -144,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
   callbackModalFormBtn.onclick = function(event) {
     ajaxSend(callbackModalForm);
   }
-    
+
   function ajaxSend(form) {  
     event.preventDefault();
 
@@ -168,6 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
       let formData = {
         name: form.querySelector('.name').value,
         phone: form.querySelector('.phone').value,
+        startDate: form.querySelector('#modal-start-date').value,
+        guest: form.querySelector('#modal-guest').value,
         checkbox: form.querySelector('.custom-checkbox').checked,
       };
 
@@ -176,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       request.open('post', "phpmailer/mailer.php");
       request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8');
-      request.send('name=' + encodeURIComponent(formData.name) + '&phone=' + encodeURIComponent(formData.phone) + '&checkbox=' + encodeURIComponent(formData.checkbox));
+      request.send('name=' + encodeURIComponent(formData.name) + '&phone=' + encodeURIComponent(formData.phone) + '&start_date=' + encodeURIComponent(formData.startDate) + '&guest=' + encodeURIComponent(formData.guest) + '&checkbox=' + encodeURIComponent(formData.checkbox));
 
       // Сообщение
       alert("Спасибо. Мы свяжемся с вами.");
@@ -195,7 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   let mask = IMask(elementPhone, maskOptionsPhone);
-
 
   // Current year
   let footerCityYear = document.querySelector('.city-year');

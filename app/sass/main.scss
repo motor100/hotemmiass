@@ -113,6 +113,15 @@ ul {
 .pswp__img {
   object-fit: contain;
 }
+.required {
+  border-bottom: 1px solid #FF7272 !important;
+}
+.required::placeholder {
+  color: #FF7272 !important;
+}
+.required::-ms-input-placeholder {
+  color: #FF7272 !important;
+}
 
 // header
 .header {
@@ -155,7 +164,6 @@ ul {
 .header .header-contacts {
   display: flex;
   margin: 0 0 30px 0;
-  // justify-content: end;
   justify-content: flex-end;
 }
 .header .header-contacts .header-phone {
@@ -195,12 +203,6 @@ ul {
   border-bottom: 1px solid transparent;
   transition: border-bottom .3s;
 }
-// .header .top-menu .menu-item:first-child {
-//   margin: 0 4% 0 0;
-// }
-// .header .top-menu .menu-item:last-child {
-//   margin: 0 0 0 4%;
-// }
 .header .top-menu .menu-item a {
   font-size: 20px;
   color: #fff;
@@ -291,22 +293,11 @@ ul {
 .main-section .form-group .guest::before {
   background: url(../images/guest-icon.svg) center no-repeat;
 }
-// .main-section .form-group .input-guest {
-//   -moz-appearance: textfield;
-// }
-// .main-section .form-group .input-guest::-webkit-inner-spin-button,
-// .main-section .form-group .input-guest::-webkit-outer-spin-button {
-//   -webkit-appearance: none;
-//   -moz-appearance: none;
-//   appearance: none;
-//   margin: 0;
-// }
 .main-section .order-btn-container {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  // width: 1400px;
   max-width: 1270px;
   margin: 0 auto;
 }
@@ -316,22 +307,15 @@ ul {
   right: 0;
   background: url(../images/main-radius.png) center no-repeat;
   background-size: contain;
-  // width: 400px;
-  // height: 177px;
   width: 328px;
   height: 152px;
 }
 .main-section .order-btn {
   position: absolute;
-  // bottom: -95px;
-  // right: 85px;
   bottom: -75px;
   right: 69px;
-  // width: 230px;
-  // height: 230px;
   width: 190px;
   height: 190px;
-  // padding: 88px 61px 88px 20px;
   padding: 70px 49px 70px 10px;
   border: 1px solid #816347;
   border-radius: 50%;
@@ -340,7 +324,6 @@ ul {
 }
 .main-section .order-btn-text {
   font-family: 'jost-light';
-  // font-size: 18px;
   font-size: 16px;
   text-transform: uppercase;
 }
@@ -380,8 +363,6 @@ ul {
 }
 .rooms-section .rooms-item-content {
   position: relative;
-  // padding: 32px 32px 32px 40px;
-  // padding: 9% 9% 13% 9%;
   padding: 9% 9% 2% 9%;
   cursor: pointer;
 }
@@ -403,23 +384,11 @@ ul {
   position: absolute;
   width: 20px;
   height: 20px;
-  // top: 90px;
   right: 0;
   left: 0;
   bottom: 10px;
   margin: 0 auto;
 }
-// .rooms-section .rooms-item-arrow:hover {
-//   animation: updown 1s infinite;
-// }
-// @keyframes updown {
-//   0% {
-//     top: 91px;
-//   }
-//   100% {
-//     top: 89px;
-//   }
-// }
 .rooms-section .rooms-item-arrow::before,
 .rooms-section .rooms-item-arrow::after {
   content: '';
@@ -473,7 +442,6 @@ ul {
 // about section
 .about-section {
   position: relative;
-  // padding: 0 0 64px 0;
   background-color: #211F1F;
 }
 .about-section .section-title-wrapper {
@@ -486,7 +454,6 @@ ul {
 .about-section .about-radius {
   position: absolute;
   top: 0;
-  // left: -42px;
   left: -64px;
   background: url(../images/about-radius.png) top no-repeat;
   background-size: contain;
@@ -646,7 +613,6 @@ ul {
   background: url(../images/dist/near-turgoyak.jpg) center no-repeat;
 }
 .near-section .big-item-content {
-  // padding: 32px;
   padding: 5%;
   border-radius: 30px;
   background-color: #0195D6;
@@ -846,7 +812,7 @@ ul {
 }
 .footer .footer-right-content {
   width: 361px;
-  margin: 0 0 0 auto;
+  margin: 0 auto;
 }
 .footer .footer-title {
   margin: 0 0 32px 0;
@@ -916,59 +882,6 @@ ul {
   margin: 0 0 10px 0;
   color: #fff;
 }
-
-
-// Demo styles
-/*
-.fake-block {
-  margin: 0 0 100px 0;
-}
-.main {
-  position: relative;
-  height: 500px;
-}
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.how-we-work {
-  height: 300px;
-}
-.croped {
-  width: 100px;
-  height: 70px;
-}
-.croped img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-*/
-
-
 
 // mobile menu 
 .burger-menu-wrapper {
@@ -1186,15 +1099,6 @@ ul {
 .modal-window .first-input-field {
   margin: 0 0 35px 0;
 }
-.modal-window .required {
-  border-bottom: 1px solid #FF7272;
-}
-.modal-window .required::placeholder {
-  color: #FF7272;
-}
-.modal-window .required::-ms-input-placeholder {
-  color: #FF7272;
-}
 .modal-window .checkbox-text {
   display: block;
   margin: 0 0 30px 0;
@@ -1301,7 +1205,7 @@ ul {
     min-height: 405px;
   }
   .footer .footer-right-content {
-    width: auto;
+    margin: 0 0 0 auto;
   }
   .footer .footer-title {
     font-size: 20px;
@@ -1452,14 +1356,6 @@ ul {
   .about-section .about-rectangle {
     display: none;
   }
-  // .header .top-menu .menu-item {
-  //   margin: 0 15px 10px 0;
-  // }
-  // .main {
-  //   .title {
-  //     padding: 200px 0 10px 0;
-  //   }
-  // }
   .advantages-section .advantages-item-big-text {
     font-size: 17px;
   }
@@ -1570,7 +1466,6 @@ ul {
   .testimonials-section .testimonials-item {
     width: 85%;
     min-height: auto;
-    // margin: 0 0 16px 0;
     padding: 16px;
   }
   .testimonials-section .testimonials-item-name {

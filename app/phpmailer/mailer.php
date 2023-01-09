@@ -8,8 +8,6 @@ $checkbox = $_POST["checkbox"];
 
 $data = $name . " " . $phone . " " . $start_date . " " . $guest . " " . $checkbox;
 
-file_put_contents('text.txt', $data);
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -35,7 +33,7 @@ $mail->From = 'admin@mybutton.ru';
 $mail->FromName = 'admin';
 
 // Кому
-$mail->addAddress('ooo74ss@mail.ru', 'admin');
+$mail->addAddress('260443@mail.ru', 'admin');
 
 // Тема письма
 $mail->Subject = 'Заявка с сайта Гостиница Миасс';

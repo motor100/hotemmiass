@@ -26,7 +26,7 @@ $mail->SMTPDebug = 0;
 $mail->Host = 'ssl://server17.hosting.reg.ru';
 $mail->Port = 465;
 $mail->Username = 'admin@mybutton.ru';
-$mail->Password = 'zA1rA0yO0a';
+$mail->Password = 'sL3dB5wE2x';
 
 // От кого
 $mail->From = 'admin@mybutton.ru';

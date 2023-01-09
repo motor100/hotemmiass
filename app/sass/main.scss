@@ -122,6 +122,9 @@ ul {
 .required::-ms-input-placeholder {
   color: #FF7272 !important;
 }
+.address-br {
+  display: none;
+}
 
 // header
 .header {
@@ -960,10 +963,10 @@ ul {
 }
 .mobile-menu .logo {
   width: 140px;
-  margin: 0 auto 25px auto;
+  margin: 0 auto 20px auto;
 }
 .mobile-menu .address {
-  margin: 0 0 40px 0;
+  margin: 0 0 35px 0;
   font-size: 18px;
   text-align: center;
 }
@@ -1572,12 +1575,27 @@ ul {
     font-size: 16px;
   }
   .modal-window .modal-area {
-    padding: 50px 34px 50px 34px;
+    padding: 45px 34px 50px 34px;
+  }
+  .modal-window .first-input-field {
+    margin: 0 0 30px 0;
   }
   .footer {
     padding: 60px 0 40px 0;
   }
   .footer .footer-logo {
     width: 55%;
+  }
+  .footer .footer-right-content {
+    width: auto;
+  }
+  .address-br {
+    display: initial;
+  }
+}
+
+@media only screen and (max-width : 360px) {
+  .modal-window .modal-wrapper {
+    top: 3%;
   }
 }

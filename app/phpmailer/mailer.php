@@ -23,17 +23,25 @@ $mail->isSMTP();
 $mail->SMTPAuth = true;
 $mail->SMTPDebug = 0;
 
+// timeweb
+/*
+$mail->Host = 'ssl://smtp.timeweb.ru';
+$mail->Port = 465;
+$mail->Username = 'Логин@домен.ru';
+$mail->Password = 'Пароль';
+*/
+
 $mail->Host = 'ssl://server17.hosting.reg.ru';
 $mail->Port = 465;
 $mail->Username = 'admin@mybutton.ru';
-$mail->Password = 'sL3dB5wE2x';
+$mail->Password = 'oU6oD4vO2b';
 
 // От кого
 $mail->From = 'admin@mybutton.ru';
 $mail->FromName = 'admin';
 
 // Кому
-$mail->addAddress('260443@mail.ru', 'admin');
+$mail->addAddress('info@fenix-mix.ru', 'admin');
 
 // Тема письма
 $mail->Subject = 'Заявка с сайта Гостиница Миасс';

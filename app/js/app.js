@@ -11,11 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
   let offset = 2;
   let max = new Date(year, month + offset, day);
 
+  // Calendar
   new AirDatepicker('#start-date', {
     minDate: new Date(),
     maxDate: max,
     autoClose: true,
   });
+
 
   // Digits only
   let inputDigitsOnly = document.querySelector('#guest');
@@ -33,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // About swiper slider
+  /*
   const aboutSlider = new Swiper('.about-slider', {
     slidesPerView: 1,
     loop: true,
@@ -41,12 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
       prevEl: '.swiper-button-prev',
     },
   });
+  
 
   // Testimonials swiper slider
+  /*
   const testimonialsSlider = new Swiper('.testimonials-slider', {
     slidesPerView: 'auto',
     spaceBetween: 20,
   });
+  */
 
   // Мобильное меню
   let burgerMenuWrapper = document.querySelector('.burger-menu-wrapper'),
@@ -208,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Input mask
+  /*
   let elementPhone = document.querySelector('#callback-phone');
 
   let maskOptionsPhone = {
@@ -215,6 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   let mask = IMask(elementPhone, maskOptionsPhone);
+  */
 
   // Current year
   let footerCityYear = document.querySelector('.city-year');

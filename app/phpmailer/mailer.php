@@ -34,7 +34,7 @@ $mail->Password = 'Пароль';
 $mail->Host = 'ssl://server17.hosting.reg.ru';
 $mail->Port = 465;
 $mail->Username = 'admin@mybutton.ru';
-$mail->Password = 'oU6oD4vO2b';
+$mail->Password = 'zU7yU2dI0m';
 
 // От кого
 $mail->From = 'admin@mybutton.ru';

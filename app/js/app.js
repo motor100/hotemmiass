@@ -12,7 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
   let max = new Date(year, month + offset, day);
 
   // Calendar
-  new AirDatepicker('#start-date', {
+  // new AirDatepicker('#start-date', {
+  //   minDate: new Date(),
+  //   maxDate: max,
+  //   autoClose: true,
+  // });
+  $('#start-date').datepicker({
     minDate: new Date(),
     maxDate: max,
     autoClose: true,
